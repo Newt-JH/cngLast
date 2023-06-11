@@ -40,6 +40,7 @@ export default function SubPage() {
       </div>
       {/* <img class="lg:hidden block py-4" src="/img/main/Container.png"> */}
       <img
+         alt=""
         className="lg:hidden block py-4 my-4 "
         src="/img/main/Container_m.png"
       />
@@ -52,11 +53,13 @@ export default function SubPage() {
             <ol className="flex flex-col self-stretch justify-center flex-grow gap-4 lg:py-10 partner lg:col-6 ">
               <li className="flex justify-center gap-6 flex-col lg:flex-row">
                 <img
+                   alt=""
                   id="Ci"
                   src="/img/introduce/graph.png"
                   className="m-auto w-fit"
                 />
                 <img
+                   alt=""
                   id="Ci"
                   src="/img/introduce/graph-1.png"
                   className="m-auto w-fit"
@@ -64,6 +67,7 @@ export default function SubPage() {
               </li>
               <li>
                 <img
+                   alt=""
                   id="Ci"
                   src="/img/introduce/graph-2.png"
                   className="m-auto"
@@ -126,10 +130,12 @@ export default function SubPage() {
             >
               <div className="">
                 <img
+                   alt=""
                   className="block transition-all group-hover:hidden w-[150px]"
                   src="/img/icon/service/icon1.svg"
                 />
                 <img
+                   alt=""
                   className="hidden transition-all group-hover:block group-hover:opacity-100 w-[150px] opacity-0"
                   src="/img/icon/service/icon1_w.svg"
                 />
@@ -146,10 +152,12 @@ export default function SubPage() {
             >
               <div>
                 <img
+                   alt=""
                   className="block transition-all group-hover:hidden w-[150px]"
                   src="/img/icon/service/icon2.svg"
                 />
                 <img
+                   alt=""
                   className="hidden transition-all group-hover:block w-[150px]"
                   src="/img/icon/service/icon2_w.svg"
                 />
@@ -164,10 +172,12 @@ export default function SubPage() {
             >
               <div>
                 <img
+                   alt=""
                   className="block transition-all group-hover:hidden w-[150px]"
                   src="/img/icon/service/icon3.svg"
                 />
                 <img
+                   alt=""
                   className="hidden transition-all group-hover:block w-[150px]"
                   src="/img/icon/service/icon3_w.svg"
                 />
@@ -204,68 +214,68 @@ export default function SubPage() {
             {/* animate-[moveforeverBtoT_30s_linear_infinite] */}
             <ol className="flex flex-col self-stretch justify-center flex-grow gap-9 partner ">
               <li className="flex self-stretch justify-center gap-12 ">
-                <img src="/img/main/partner/1.png" />
-                <img src="/img/main/partner/2.png" />
-                <img src="/img/main/partner/3.png" />
-                <img src="/img/main/partner/4.png" />
-                <img src="/img/main/partner/5.png" />
+                <img alt="" src="/img/main/partner/1.png" />
+                <img alt="" src="/img/main/partner/2.png" />
+                <img alt="" src="/img/main/partner/3.png" />
+                <img alt="" src="/img/main/partner/4.png" />
+                <img alt="" src="/img/main/partner/5.png" />
               </li>
               <li className="flex self-stretch justify-center gap-12 ">
-                <img src="/img/main/partner/6.png" />
-                <img src="/img/main/partner/7.png" />
-                <img src="/img/main/partner/8.png" />
-                <img src="/img/main/partner/9.png" />
-                <img src="/img/main/partner/10.png" />
-                <img src="/img/main/partner/11.png" />
+                <img alt="" src="/img/main/partner/6.png" />
+                <img alt="" src="/img/main/partner/7.png" />
+                <img alt="" src="/img/main/partner/8.png" />
+                <img alt="" src="/img/main/partner/9.png" />
+                <img alt="" src="/img/main/partner/10.png" />
+                <img alt="" src="/img/main/partner/11.png" />
               </li>
               {/* <li class="flex self-stretch justify-end gap-12 ">
-      <img src="/img/main/partner/12.png">
-      <img src="/img/main/partner/13.png">
-      <img src="/img/main/partner/1.png">
-      <img src="/img/main/partner/2.png">
-      <img src="/img/main/partner/3.png">
-      <img src="/img/main/partner/4.png">
-      <img src="/img/main/partner/5.png">
-      <img src="/img/main/partner/6.png">
-      <img src="/img/main/partner/7.png">
-      <img src="/img/main/partner/8.png">
-      <img src="/img/main/partner/9.png">
-      <img src="/img/main/partner/10.png">
-      <img src="/img/main/partner/11.png">
-      <img src="/img/main/partner/12.png">
-      <img src="/img/main/partner/13.png">
-      <img src="/img/main/partner/14.png">
-      <img src="/img/main/partner/15.png">
-      <img src="/img/main/partner/16.png">
-      <img src="/img/main/partner/17.png">
-      <img src="/img/main/partner/18.png">
-      <img src="/img/main/partner/19.png">
-      <img src="/img/main/partner/20.png">
-      <img src="/img/main/partner/21.png">
-      <img src="/img/main/partner/22.png">
-      <img src="/img/main/partner/23.png">
-      <img src="/img/main/partner/24.png">
-      <img src="/img/main/partner/25.png">
-      <img src="/img/main/partner/26.png">
-      <img src="/img/main/partner/27.png">
-      <img src="/img/main/partner/28.png">
-      <img src="/img/main/partner/29.png">
-      <img src="/img/main/partner/14.png">
-      <img src="/img/main/partner/15.png">
-      <img src="/img/main/partner/16.png">
-      <img src="/img/main/partner/17.png">
-      <img src="/img/main/partner/18.png">
-      <img src="/img/main/partner/19.png">
-      <img src="/img/main/partner/20.png">
-      <img src="/img/main/partner/21.png">
-      <img src="/img/main/partner/22.png">
-      <img src="/img/main/partner/23.png">
-      <img src="/img/main/partner/24.png">
-      <img src="/img/main/partner/25.png">
-      <img src="/img/main/partner/26.png">
-      <img src="/img/main/partner/27.png">
-      <img src="/img/main/partner/28.png">
-      <img src="/img/main/partner/29.png">
+      <img alt="" src="/img/main/partner/12.png">
+      <img alt="" src="/img/main/partner/13.png">
+      <img alt="" src="/img/main/partner/1.png">
+      <img alt="" src="/img/main/partner/2.png">
+      <img alt="" src="/img/main/partner/3.png">
+      <img alt="" src="/img/main/partner/4.png">
+      <img alt="" src="/img/main/partner/5.png">
+      <img alt="" src="/img/main/partner/6.png">
+      <img alt="" src="/img/main/partner/7.png">
+      <img alt="" src="/img/main/partner/8.png">
+      <img alt="" src="/img/main/partner/9.png">
+      <img alt="" src="/img/main/partner/10.png">
+      <img alt="" src="/img/main/partner/11.png">
+      <img alt="" src="/img/main/partner/12.png">
+      <img alt="" src="/img/main/partner/13.png">
+      <img alt="" src="/img/main/partner/14.png">
+      <img alt="" src="/img/main/partner/15.png">
+      <img alt="" src="/img/main/partner/16.png">
+      <img alt="" src="/img/main/partner/17.png">
+      <img alt="" src="/img/main/partner/18.png">
+      <img alt="" src="/img/main/partner/19.png">
+      <img alt="" src="/img/main/partner/20.png">
+      <img alt="" src="/img/main/partner/21.png">
+      <img alt="" src="/img/main/partner/22.png">
+      <img alt="" src="/img/main/partner/23.png">
+      <img alt="" src="/img/main/partner/24.png">
+      <img alt="" src="/img/main/partner/25.png">
+      <img alt="" src="/img/main/partner/26.png">
+      <img alt="" src="/img/main/partner/27.png">
+      <img alt="" src="/img/main/partner/28.png">
+      <img alt="" src="/img/main/partner/29.png">
+      <img alt="" src="/img/main/partner/14.png">
+      <img alt="" src="/img/main/partner/15.png">
+      <img alt="" src="/img/main/partner/16.png">
+      <img alt="" src="/img/main/partner/17.png">
+      <img alt="" src="/img/main/partner/18.png">
+      <img alt="" src="/img/main/partner/19.png">
+      <img alt="" src="/img/main/partner/20.png">
+      <img alt="" src="/img/main/partner/21.png">
+      <img alt="" src="/img/main/partner/22.png">
+      <img alt="" src="/img/main/partner/23.png">
+      <img alt="" src="/img/main/partner/24.png">
+      <img alt="" src="/img/main/partner/25.png">
+      <img alt="" src="/img/main/partner/26.png">
+      <img alt="" src="/img/main/partner/27.png">
+      <img alt="" src="/img/main/partner/28.png">
+      <img alt="" src="/img/main/partner/29.png">
     </li> */}
             </ol>
           </div>
@@ -298,11 +308,11 @@ export default function SubPage() {
             </li>
             <li className="p-4 border-b flex-grow self-stretch">
               <strong className="min-w-[200px] pr-2 inline-block">Mob</strong>
-              경기도 평택시 서탄면 서탄2로 226
+              010-5403-7768
             </li>
             <li className="p-4 border-b flex-grow self-stretch">
               <strong className="min-w-[200px] pr-2 inline-block">Email</strong>
-              경기도 평택시 서탄면 서탄2로 226
+              cgtech8386@naver.com
             </li>
           </ol>
         </div>

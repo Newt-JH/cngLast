@@ -48,8 +48,8 @@ export default function Header({ isMain = false }) {
   const getSubHeader = () => (
     <nav className="lg:container flex items-center justify-between w-full h-full">
       <Link to="/" className="logo lg:px-[50px] h-[60px] px-4">
-        {/* <img src="../../../img/logo_d_e.svg" class="hidden h-full lg:block logo_d_e"> */}
-        <img src="/img/logo_l_e.svg" className="block h-full logo_l_e" />
+        {/* <img alt="" src="../../../img/logo_d_e.svg" class="hidden h-full lg:block logo_d_e"> */}
+        <img alt="" src="/img/logo_l_e.svg" className="block h-full logo_l_e" />
       </Link>
       <ol
         className={`items-center self-stretch justify-center flex-grow gap-20 lg:flex menu ${

@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="w-full lg:py-[150px] py-12 border-t-[3px] border-primary border-solid bg-white ">
       <div className="container flex justify-between lg:flex-row flex-col gap-10">
         <a className="logo lg:h-[60px] h-14">
-          <img src="/img/logo_l_e.svg" className="h-full" />
+          <img alt="" src="/img/logo_l_e.svg" className="h-full" />
         </a>
         <ul className="flex justify-between lg:col-8 gap-4 flex-col lg:flex-row">
           <li className="">
@@ -26,11 +26,11 @@ export default function Footer() {
               </li>
               <li className="flex lg:flex-col gap-2">
                 <strong className="min-w-[100px] inline-block">Mob</strong>
-                경기도 평택시 서탄면 서탄2로 226
+                010-5403-7768
               </li>
               <li className="flex lg:flex-col gap-2">
                 <strong className="min-w-[100px] inline-block">Email</strong>
-                경기도 평택시 서탄면 서탄2로 226
+                cgtech8386@naver.com
               </li>
             </ol>
           </li>
@@ -38,16 +38,19 @@ export default function Footer() {
             <h5>About</h5>
             <ol className="flex flex-col gap-6 text-xl font-medium pt-6  text-text2">
               <li>
-                <a href="">Home</a>
+                <a href="/">Home</a>
               </li>
               <li>
-                <a href="">기업소개</a>
+                <a href="/Sub1">기업소개</a>
               </li>
               <li>
-                <a href="">제품소개</a>
+                <a href="/Sub2">제품소개</a>
               </li>
               <li>
-                <a href="">견적문의</a>
+                <a href="/Rental">렌탈/대여</a>
+              </li>
+              <li>
+                <a href="/Sub3">견적문의</a>
               </li>
             </ol>
           </li>
@@ -73,7 +76,7 @@ export default function Footer() {
                 style={{ display: openFamilySite ? "block" : "none" }}
               >
                 <li>
-                  <a href="#!">크리샤 </a>
+                  <a href="/">크리샤 </a>
                 </li>
               </ul>
             </div>
@@ -92,30 +95,30 @@ export default function Footer() {
             <a href="">개인정보처리방침 | </a>
           </li>
           <li>
-            <a href=""> 개인정보처리방침</a>
+            <a href="">  개인정보처리방침</a>
           </li>
         </ul>
         <div className="flex justify-between pt-9 lg:flex-row flex-col gap-4">
           <p>Copyright © 2022 C&amp;G tech. All Rights Reserved.</p>
           <ul className="flex gap-4">
             <li>
-              <a href="">
-                <img src="/img/icon/Instagtam.svg" />
+              <a href="https://instagram.com/cgt0706?igshid=NTc4MTIwNjQ2YQ==">
+                <img alt="" src="/img/icon/Instagtam.svg" />
               </a>
             </li>
             <li>
-              <a href="">
-                <img src="/img/icon/Youtube.svg" />
+              <a href="https://youtube.com/@user-kv2gh1yi2k">
+                <img alt="" src="/img/icon/Youtube.svg" />
               </a>
             </li>
             <li>
-              <a href="">
-                <img src="/img/icon/Naver.svg" />
+              <a href="https://m.blog.naver.com/PostList.naver?blogId=cgtech8386">
+                <img alt="" src="/img/icon/Naver.svg" />
               </a>
             </li>
             <li>
-              <a href="">
-                <img src="/img/icon/Facebook.svg" />
+              <a href="https://www.facebook.com/cgtech8386?mibextid=LQQJ4d">
+                <img alt="" src="/img/icon/Facebook.svg" />
               </a>
             </li>
           </ul>

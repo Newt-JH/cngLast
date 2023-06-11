@@ -100,15 +100,15 @@ export default function SubPage22() {
         </div>
         <ol className="flex gap-9 flex-col lg:flex-row">
           <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]">
-            <img src="/img/introduce2/product.png" />
+            <img alt="" src="/img/introduce2/product.png" />
             <h5 className="pt-[30px] font-medium w-full">암롤박스</h5>
           </li>
           <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]">
-            <img src="/img/introduce2/product.png" />
+            <img alt="" src="/img/introduce2/product.png" />
             <h5 className="pt-[30px] font-medium w-full">암롤박스</h5>
           </li>
           <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]">
-            <img src="/img/introduce2/product.png" />
+            <img alt="" src="/img/introduce2/product.png" />
             <h5 className="pt-[30px] font-medium w-full">암롤박스</h5>
           </li>
         </ol>
@@ -529,7 +529,7 @@ export default function SubPage22() {
           </li>
         </ul>
         <a
-          href=""
+          href="/Sub2_2"
           className=" button_bg lg:flex mx-auto mt-12 !bg-primary2 !w-[320px] !h-16"
         >
           문의하기

@@ -25,6 +25,7 @@ export default function SubRental() {
                 style={{}}
               >
                 <img
+                  alt=""
                   id="Ci"
                   src="/img/rental/1.jpg"
                   className="m-auto lg:mb-[50px] mb-[-50px] lg:ml-[120px] lg:px-0 px-[25px]"
@@ -93,6 +94,7 @@ export default function SubRental() {
                 style={{}}
               >
                 <img
+                  alt=""
                   id="Ci"
                   src="/img/rental/1.jpg"
                   className="lg:mb-[50px] lg:mt-0 mt-[-50px] lg:ml-[-120px] lg:px-0 px-[25px]"
@@ -108,23 +110,23 @@ export default function SubRental() {
             <h2 className="">주의사항</h2>
             <ol className="flex self-stretch flex-grow gap-20 flex-wrap font-medium">
               <li className="flex self-stretch gap-4 flex-col h4 flex-grow">
-                <img src="/img/rental/notice.png" className="w-fit" />
+                <img alt="" src="/img/rental/notice.png" className="w-fit" />
                 01.<i>암롤박스 전용 렌탈</i>
               </li>
               <li className="flex self-stretch gap-4 flex-col h4 flex-grow">
-                <img src="/img/rental/notice.png" className="w-fit" />
+                <img alt="" src="/img/rental/notice.png" className="w-fit" />
                 02.<i>기간 외 사용시 렌탈료 일별 금액 청구</i>
               </li>
               <li className="flex self-stretch gap-4 flex-col h4 flex-grow">
-                <img src="/img/rental/notice.png" className="w-fit" />
+                <img alt="" src="/img/rental/notice.png" className="w-fit" />
                 03.<i>직접 공장에 와서 수거 및 반납</i>
               </li>
               <li className="flex self-stretch gap-4 flex-col h4 flex-grow">
-                <img src="/img/rental/notice.png" className="w-fit" />
+                <img alt="" src="/img/rental/notice.png" className="w-fit" />
                 04.<i>운송업 이용시 운송비 별도</i>
               </li>
               <li className="flex self-stretch gap-4 flex-col h4 flex-grow">
-                <img src="/img/rental/notice.png" className="w-fit" />
+                <img alt="" src="/img/rental/notice.png" className="w-fit" />
                 05.<i>파손 및 분실 금액 별도 청구</i>
               </li>
             </ol>

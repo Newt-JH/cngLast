@@ -17,7 +17,7 @@ export default function SubPage21() {
           <div className="flex  self-stretch  overflow-hidden pb-[30px] swiper mySwiper2 w-full">
             <ul className=" swiper-wrapper ">
               <li className="relative overflow-hidden bg-black/50 swiper-slide group transition-all">
-                <img src="/img/introduce2/product.png" className="h-full" />
+                <img alt="" src="/img/introduce2/product.png" className="h-full" />
                 <a className="absolute left-[212px] top-[270px] gap-3 px-[30px] py-4 rounded-md border border-white group-hover:flex hidden text-[22px] font-bold  text-white transition">
                   More View
                   <i className=" text-lg text-center text-white material-icons-round">
@@ -63,16 +63,16 @@ export default function SubPage21() {
           <div thumbsslider="" className="swiper mySwiper w-full">
             <ul className="swiper-wrapper">
               <li className="flex bg-[url('a.png')] !w-[100px] h-[100px] border border-[#5e635f] swiper-slide overflow-hidden">
-                <img src="/img/introduce2/product.png" className="w-full" />
+                <img alt="" src="/img/introduce2/product.png" className="w-full" />
               </li>
               <li className="flex bg-[url('a.png')] !w-[100px] h-[100px] border border-[#5e635f] swiper-slide">
-                <img className="  " src="80.png" />
+                <img alt="" className="  " src="80.png" />
               </li>
               <li className="flex bg-[url('a.png')] !w-[100px] h-[100px] border border-[#5e635f] swiper-slide">
-                <img className="  " src="80.png" />
+                <img alt="" className="  " src="80.png" />
               </li>
               <li className="flex bg-[url('a.png')] !w-[100px] h-[100px] border border-[#5e635f] swiper-slide">
-                <img className="  " src="80.png" />
+                <img alt="" className="  " src="80.png" />
               </li>
             </ul>
           </div>
@@ -102,7 +102,7 @@ export default function SubPage21() {
                   <p className=" text-sm  text-[#131a15]">제품소개</p>
                 </div>
                 <a
-                  href=""
+                  href="/Sub2"
                   className="p-[3px] rounded-full border text-xs text-center material-icons-round w-5 h-5 !leading-none"
                 >
                   chevron_right
@@ -163,12 +163,12 @@ export default function SubPage21() {
                         <p className=" text-sm  text-[#00bacc]">
                           제작 및 배송기간 문의필요
                         </p>
-                        <a
+                        {/* <a
                           href="#!"
                           className="material-icons-round !leading-none text-xs text-center text-[#a9abaa]"
                         >
                           help
-                        </a>
+                        </a> */}
                       </div>
                     </div>
                   </div>
@@ -207,7 +207,7 @@ export default function SubPage21() {
               <div className="flex  self-stretch  h-[84px] overflow-hidden">
                 <div className="flex  flex-grow h-[84px]">
                   <div className="flex justify-center items-center self-stretch  relative overflow-hidden gap-4 px-4 bg-[#f4f4f4]">
-                    <img src="/img/introduce2/detail/truck.png" />
+                    <img alt="" src="/img/introduce2/detail/truck.png" />
                     <p className=" text-base  text-[#131a15]">
                       <span className=" text-base  text-[#131a15]">
                         큰 가격이 부담 스러우신가요?
@@ -220,7 +220,7 @@ export default function SubPage21() {
                   </div>
                   <div className="flex justify-end items-center self-stretch flex-grow relative overflow-hidden px-4 bg-[#f4f4f4]">
                     <a
-                      href=""
+                      href="/Sub2_2"
                       className=" w-[78px] h-[38px] rounded-md bg-white border border-[#c7d9d2] text-[15px] text-center py-2"
                     >
                       렌탈문의
@@ -261,13 +261,14 @@ export default function SubPage21() {
                 </div>
               </div>
               <a
-                href="#!"
+                href="/Sub2_2"
                 className="flex justify-center items-center self-stretch  relative px-[43px] py-[13px] rounded-sm bg-primary shadow"
               >
                 <p className=" text-2xl font-bold text-center text-white">
                   견적문의
                 </p>
                 <img
+                  alt=""
                   src="/img/introduce2/tag.png"
                   className="absolute left-[205.5px] top-[-22.5px]"
                 />
@@ -283,7 +284,7 @@ export default function SubPage21() {
             <div className="flex flex-col justify-center items-center self-stretch  gap-8 px-8">
               <div className="flex justify-center items-center self-stretch  px-4 py-6 bg-[#fff5f5] border border-[#ffbfbf]">
                 <div className="flex  items-center  relative gap-[31px]">
-                  <img className="" src="/img/introduce2/icon1.png" />
+                  <img alt="" className="" src="/img/introduce2/icon1.png" />
                   <p className=" text-center">
                     사진의 이미지는
                     <span className="  text-[#ef2b2a]">

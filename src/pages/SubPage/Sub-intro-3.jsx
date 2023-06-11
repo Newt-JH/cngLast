@@ -10,7 +10,7 @@ export default function SubPage3() {
       <Header />
       <section className="bg-surfaceMid pt-20">
         <div className="container  flex lg:gap-20 justify-center py-5 lg:flex-row flex-col">
-          <img src="../../img/introduce3/ask.png" />
+          <img alt="" src="../../img/introduce3/ask.png" />
           <div className="py-10">
             <h3>
               무엇을

@@ -2,14 +2,55 @@ import React, { useState } from "react";
 import TopButton from "../../component/TopButton";
 import Header from "../../component/Header";
 import Footer from "../../component/Footer";
+import { Link } from 'react-router-dom';
 
 export default function SubPage() {
   const [openSelectBox, setOpenSelectBox] = useState(false);
   const [select, setSelect] = useState("tab1");
+  const [tabComment, setTabComment] = useState({
+    title: "암롤박스",
+    commentOne: "암롤트럭 후방에 적재하여",
+    commentTwo: "각종 폐기물 운반에 이용됩니다"
+  });
 
   const handleSelect = (tab) => {
     setSelect(tab);
+    
+    switch (tab) {
+      case 'tab1':
+        setTabComment({
+          title: "암롤박스",
+          commentOne: "암롤트럭 후방에 적재하여",
+          commentTwo: "각종 폐기물 운반에 이용됩니다."
+        });
+        break;
+      case 'tab2':
+        setTabComment({
+          title: "고철/스크랩",
+          commentOne: "다양한 적재물을 처리하는 박스",
+          commentTwo: "를 맞춤형 제작합니다."
+        });
+        break;
+      case 'tab3':
+        setTabComment({
+          title: "중고박스",
+          commentOne: "보다 저렴한 가격의 폐기물 처리 박스",
+          commentTwo: "를 구매하실 수 있습니다."
+        });
+        break;
+      case 'tab4':
+        setTabComment({
+          title: "박스수리",
+          commentOne: "고장/파손된 박스를 수리하여",
+          commentTwo: "사용 가능합니다."
+        });
+        break;
+      default:
+        // 기본 동작
+        break;
+    }
   };
+
 
   const TAB_NAME = {
     tab1: "암롤박스",
@@ -22,14 +63,13 @@ export default function SubPage() {
     <li id="tab1" className="tab-content">
       <div className="flex flex-col lg:flex-row justify-center lg:items-center self-stretch gap-[60px] px-9 py-5 bg-[#fffaf5]">
         <div className="flex flex-col justify-center  gap-3.5">
-          <h3 className="h3 font-bold">암롤박스</h3>
+          <h3 className="h3 font-bold">{ tabComment.title }</h3>
           <p className=" text-xl font-medium">
-            암롤트럭 후방에 적재하여
-            <br />
-            각종 폐기물 운반에 이용됩니다.
+            {tabComment.commentOne} <br />
+            {tabComment.commentTwo}
           </p>
         </div>
-        <img src="/img/introduce2/cg_bg_pc.png" className="" />
+        <img alt="" src="/img/introduce2/cg_bg_pc.png" className="" />
       </div>
       <div className="container pt-9">
         <div className="mb-9 w-full after:content-[''] after:block after:clear-both h-12">
@@ -45,212 +85,46 @@ export default function SubPage() {
           </span>
         </div>
         <ol className="flex gap-9 flex-wrap">
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
-              </div>
-            </div>
-          </li>
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
-              </div>
-            </div>
-          </li>
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
-              </div>
-            </div>
-          </li>
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
-              </div>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <a
-        href=""
-        className=" button_bg lg:flex mx-auto mt-12 !bg-primary2 !w-[320px] !h-16"
-      >
-        더보기 <span className="material-icons-round">expand_more</span>
-      </a>
-    </li>
-  );
 
-  const getTab2 = () => (
-    <li id="tab2" className="tab-content">
-      <div className="flex flex-col lg:flex-row justify-center lg:items-center self-stretch gap-[60px] px-9 py-5 bg-[#fffaf5]">
-        <div className="flex flex-col justify-center  gap-3.5">
-          <h3 className="h3 font-bold">암롤박스</h3>
-          <p className=" text-xl font-medium">
-            암롤트럭 후방에 적재하여
-            <br />
-            각종 폐기물 운반에 이용됩니다.
-          </p>
-        </div>
-        <img src="/img/introduce2/cg_bg_pc.png" className="" />
-      </div>
-      <div className="container pt-9">
-        <div className="mb-9 w-full after:content-[''] after:block after:clear-both h-12">
-          <span className="float-right flex rounded-md overflow-hidden border">
-            <input
-              className="outline-none p-3 w-[250px]"
-              type="text"
-              placeholder="찾으시는 상품을 입력해 주세요."
-            />
-            <button className="material-icons-round bg-primary2 text-white p-3">
-              search
-            </button>
-          </span>
-        </div>
-        <ol className="flex gap-9 flex-wrap">
           <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
+          <Link to ="/Sub2_1">
+            <img alt="" src="/img/introduce2/product.png" />
             <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
               <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
+                25루베 슬러지 오니 암롤박스 1번
               </h4>
               <div className="flex justify-between items-end w-full">
                 <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
                   #건설폐기물 양문형
                 </i>
                 <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
+                2023.06.11
                 </p>
               </div>
-            </div>
-          </li>
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
               </div>
-            </div>
-          </li>
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
-              </div>
-            </div>
-          </li>
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
-              </div>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <a
-        href=""
-        className=" button_bg lg:flex mx-auto mt-12 !bg-primary2 !w-[320px] !h-16"
-      >
-        더보기 <span className="material-icons-round">expand_more</span>
-      </a>
-    </li>
-  );
+              </Link>
+            </li>
 
-  const getTab3 = () => (
-    <li id="tab3" className="tab-content">
-      <div className="flex flex-col lg:flex-row justify-center lg:items-center self-stretch gap-[60px] px-9 py-5 bg-[#fffaf5]">
-        <div className="flex flex-col justify-center  gap-3.5">
-          <h3 className="h3 font-bold">암롤박스</h3>
-          <p className=" text-xl font-medium">
-            암롤트럭 후방에 적재하여
-            <br />
-            각종 폐기물 운반에 이용됩니다.
-          </p>
-        </div>
-        <img src="/img/introduce2/cg_bg_pc.png" className="" />
-      </div>
-      <div className="container pt-9">
-        <div className="mb-9 w-full after:content-[''] after:block after:clear-both h-12">
-          <span className="float-right flex rounded-md overflow-hidden border">
-            <input
-              className="outline-none p-3 w-[250px]"
-              type="text"
-              placeholder="찾으시는 상품을 입력해 주세요."
-            />
-            <button className="material-icons-round bg-primary2 text-white p-3">
-              search
-            </button>
-          </span>
-        </div>
-        <ol className="flex gap-9 flex-wrap">
           <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
+          <Link to ="/Sub2_1">
+            <img alt="" src="/img/introduce2/product.png" />
+            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
+              <h4 className="text-[32px] font-medium w-full">
+                25루베 슬러지 오니 암롤박스 2번
+              </h4>
+              <div className="flex justify-between items-end w-full">
+                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
+                  #건설폐기물 양문형
+                </i>
+                <p className=" text-sm font-medium  text-paragraph">
+                  2023.06.11
+                </p>
+              </div>
+              </div>
+              </Link>
+          </li>
+          {/* <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
+            <img alt="" src="/img/introduce2/product.png" />
             <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
               <h4 className="text-[32px] font-medium w-full">
                 25루베 슬러지 오니 암롤박스
@@ -266,7 +140,7 @@ export default function SubPage() {
             </div>
           </li>
           <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
+            <img alt="" src="/img/introduce2/product.png" />
             <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
               <h4 className="text-[32px] font-medium w-full">
                 25루베 슬러지 오니 암롤박스
@@ -280,145 +154,11 @@ export default function SubPage() {
                 </p>
               </div>
             </div>
-          </li>
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
-              </div>
-            </div>
-          </li>
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
-              </div>
-            </div>
-          </li>
+          </li> */}
         </ol>
       </div>
       <a
-        href=""
-        className=" button_bg lg:flex mx-auto mt-12 !bg-primary2 !w-[320px] !h-16"
-      >
-        더보기 <span className="material-icons-round">expand_more</span>
-      </a>
-    </li>
-  );
-
-  const getTab4 = () => (
-    <li id="tab4" className="tab-content">
-      <div className="flex flex-col lg:flex-row justify-center lg:items-center self-stretch gap-[60px] px-9 py-5 bg-[#fffaf5]">
-        <div className="flex flex-col justify-center  gap-3.5">
-          <h3 className="h3 font-bold">암롤박스</h3>
-          <p className=" text-xl font-medium">
-            암롤트럭 후방에 적재하여
-            <br />
-            각종 폐기물 운반에 이용됩니다.
-          </p>
-        </div>
-        <img src="/img/introduce2/cg_bg_pc.png" className="" />
-      </div>
-      <div className="container pt-9">
-        <div className="mb-9 w-full after:content-[''] after:block after:clear-both h-12">
-          <span className="float-right flex rounded-md overflow-hidden border">
-            <input
-              className="outline-none p-3 w-[250px]"
-              type="text"
-              placeholder="찾으시는 상품을 입력해 주세요."
-            />
-            <button className="material-icons-round bg-primary2 text-white p-3">
-              search
-            </button>
-          </span>
-        </div>
-        <ol className="flex gap-9 flex-wrap">
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
-              </div>
-            </div>
-          </li>
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
-              </div>
-            </div>
-          </li>
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
-              </div>
-            </div>
-          </li>
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
-              </div>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <a
-        href=""
+        href="/"
         className=" button_bg lg:flex mx-auto mt-12 !bg-primary2 !w-[320px] !h-16"
       >
         더보기 <span className="material-icons-round">expand_more</span>
@@ -430,11 +170,11 @@ export default function SubPage() {
     if (select === "tab1") {
       return getTab1();
     } else if (select === "tab2") {
-      return getTab2();
+      return getTab1();
     } else if (select === "tab3") {
-      return getTab3();
+      return getTab1();
     } else if (select === "tab4") {
-      return getTab4();
+      return getTab1();
     }
   };
 

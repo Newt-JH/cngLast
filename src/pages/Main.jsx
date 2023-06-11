@@ -91,7 +91,7 @@ export default function Main() {
                 <br />
                 실현하는 C&amp;G TECH
               </p>
-              <img src="/img/main/smile.png" />
+              <img alt="" src="/img/main/smile.png" />
               <p className="font-medium text-center lg:text-xl ">
                 암롤박스의 특화된 기술력으로 깨끗하고 쾌적한 환경을 만들기 위해
                 <br /> 그 어떤 종류의 폐기물도 처리가능한 C&amp;G TEC 만의 제작
@@ -136,7 +136,7 @@ export default function Main() {
                 <br />
                 더욱 간편하고 깨끗한 환경 조성과 함께 고객가치 실현
               </p>
-              <a href="" className="btn_circle">
+              <a href="/Sub1" className="btn_circle">
                 <div className="">More View</div>
               </a>
             </div>
@@ -144,10 +144,11 @@ export default function Main() {
           <ul className="container flex flex-col flex-grow gap-[4.2vw] py-[5vw] 2xl:px-20 ">
             <li>
               <a
-                href="#!"
+                href="/Sub2"
                 className="flex flex-col lg:flex-row items-center relative group lg:h-[400px] justify-end"
               >
                 <img
+                  alt =""
                   src="/img/main/product2.png"
                   className="lg:absolute top-0 right-[calc(50%+80px)]"
                 />
@@ -158,7 +159,7 @@ export default function Main() {
                         <i className="tag bg-point1">Hot</i>
                         <i className="tag">New</i>
                       </div>
-                      중고 암롤박스
+                      암롤박스
                     </h3>
                     <p className="text-lg font-medium text-paragraph">
                       다량의 산업/건설 폐기물 처리 및 맞춤형 제작
@@ -173,7 +174,7 @@ export default function Main() {
             </li>
             <li>
               <a
-                href="#!"
+                href="/Sub2"
                 className="flex flex-col-reverse lg:flex-row items-center relative group lg:h-[400px]"
               >
                 <div className="flex flex-col justify-end  self-stretch flex-grow gap-9 lg:px-[25px] lg:col-6 lg:py-0  py-[25px]">
@@ -186,7 +187,7 @@ export default function Main() {
                       스크랩박스
                     </h3>
                     <p className="text-lg font-medium text-paragraph">
-                      다량의 산업/건설 폐기물 처리 및 맞춤형 제작
+                    다양한 적재물 처리 박스 맞춤형 제작
                     </p>
                   </div>
                   <button className="button_stroke">
@@ -195,6 +196,7 @@ export default function Main() {
                   </button>
                 </div>
                 <img
+                  alt =""
                   src="/img/main/scrabnox.png"
                   className="lg:absolute top-0 right-[calc(-50%+80px)]"
                   style={{ right: "calc(-50% + 80px)" }}
@@ -203,10 +205,11 @@ export default function Main() {
             </li>
             <li>
               <a
-                href="#!"
+                href="/Sub2"
                 className="flex flex-col lg:flex-row items-center relative group lg:h-[400px] justify-end"
               >
                 <img
+                  alt=""
                   src="/img/main/product13.png"
                   className="lg:absolute top-0 right-[calc(50%+80px)]"
                 />
@@ -220,7 +223,7 @@ export default function Main() {
                       중고 암롤박스
                     </h3>
                     <p className="text-lg font-medium text-paragraph">
-                      다량의 산업/건설 폐기물 처리 및 맞춤형 제작
+                    보다 저렴한 가격의 폐기물 처리 박스
                     </p>
                   </div>
                   <button className="button_stroke">
@@ -232,7 +235,7 @@ export default function Main() {
             </li>
             <li>
               <a
-                href="#!"
+                href="/Sub2"
                 className="flex flex-col-reverse lg:flex-row items-center relative group lg:h-[400px]"
               >
                 <div className="flex flex-col justify-end  self-stretch flex-grow gap-9 lg:px-[25px] lg:col-6 lg:py-0  py-[25px]">
@@ -245,7 +248,7 @@ export default function Main() {
                       박스수리
                     </h3>
                     <p className="text-lg font-medium text-paragraph">
-                      다량의 산업/건설 폐기물 처리 및 맞춤형 제작
+                    고장/파손된 박스 수리
                     </p>
                   </div>
                   <button className="button_stroke">
@@ -254,6 +257,7 @@ export default function Main() {
                   </button>
                 </div>
                 <img
+                  alt=""
                   src="/img/main/product4.png"
                   className="lg:absolute top-0 right-[calc(-50%+80px)]"
                 />
@@ -281,6 +285,7 @@ export default function Main() {
           <main className="lg:py-[60px] py-10" style={{}}>
             <div className="container relative flex self-stretch justify-end gap-20">
               <img
+                alt=""
                 src="/img/main/product2.png"
                 className="lg:absolute top-0 right-[calc(50%+80px)] lg:block hidden"
               />
@@ -307,7 +312,7 @@ export default function Main() {
                       <i className="gradient2 text_clip">21</i>
                     </p>
                     <div className="flex items-center justify-center flex-grow gap-2 lg:flex-col">
-                      <img src="/img/main/about_us_checkbox.png" />
+                      <img alt="" src="/img/main/about_us_checkbox.png" />
                       <p className="text-lg font-medium ">즉시 출고 가능</p>
                     </div>
                   </li>
@@ -316,7 +321,7 @@ export default function Main() {
                       <i className="gradient2 text_clip">27</i>
                     </p>
                     <div className="flex items-center justify-center flex-grow gap-2 lg:flex-col">
-                      <img src="/img/main/about_us_checkbox.png" />
+                      <img alt="" src="/img/main/about_us_checkbox.png" />
                       <p className="text-lg font-medium ">렌탈가능</p>
                     </div>
                   </li>
@@ -325,7 +330,7 @@ export default function Main() {
                       <i className="gradient2 text_clip">11</i>
                     </p>
                     <div className="flex items-center justify-center flex-grow gap-2 lg:flex-col">
-                      <img src="/img/main/about_us_checkbox.png" />
+                      <img alt="" src="/img/main/about_us_checkbox.png" />
                       <p className="text-lg font-medium ">즉시 중고 가능</p>
                     </div>
                   </li>
@@ -361,66 +366,66 @@ export default function Main() {
             </div>
             <ol className="flex flex-col self-stretch justify-center flex-grow py-10 overflow-hidden gap-9 partner">
               <li className="flex items-center self-stretch gap-12 animate-[moveforeverL_30s_linear_infinite]">
-                <img src="/img/main/partner/1.png" />
-                <img src="/img/main/partner/2.png" />
-                <img src="/img/main/partner/3.png" />
-                <img src="/img/main/partner/4.png" />
-                <img src="/img/main/partner/5.png" />
-                <img src="/img/main/partner/6.png" />
-                <img src="/img/main/partner/7.png" />
-                <img src="/img/main/partner/8.png" />
-                <img src="/img/main/partner/9.png" />
-                <img src="/img/main/partner/10.png" />
-                <img src="/img/main/partner/11.png" />
-                <img src="/img/main/partner/12.png" />
-                <img src="/img/main/partner/13.png" />
-                <img src="/img/main/partner/1.png" />
-                <img src="/img/main/partner/2.png" />
-                <img src="/img/main/partner/3.png" />
-                <img src="/img/main/partner/4.png" />
-                <img src="/img/main/partner/5.png" />
-                <img src="/img/main/partner/6.png" />
-                <img src="/img/main/partner/7.png" />
-                <img src="/img/main/partner/8.png" />
-                <img src="/img/main/partner/9.png" />
-                <img src="/img/main/partner/10.png" />
-                <img src="/img/main/partner/11.png" />
-                <img src="/img/main/partner/12.png" />
-                <img src="/img/main/partner/13.png" />
+                <img alt="" src="/img/main/partner/1.png" />
+                <img alt="" src="/img/main/partner/2.png" />
+                <img alt="" src="/img/main/partner/3.png" />
+                <img alt="" src="/img/main/partner/4.png" />
+                <img alt="" src="/img/main/partner/5.png" />
+                <img alt="" src="/img/main/partner/6.png" />
+                <img alt="" src="/img/main/partner/7.png" />
+                <img alt="" src="/img/main/partner/8.png" />
+                <img alt="" src="/img/main/partner/9.png" />
+                <img alt="" src="/img/main/partner/10.png" />
+                <img alt="" src="/img/main/partner/11.png" />
+                <img alt="" src="/img/main/partner/12.png" />
+                <img alt="" src="/img/main/partner/13.png" />
+                <img alt="" src="/img/main/partner/1.png" />
+                <img alt="" src="/img/main/partner/2.png" />
+                <img alt="" src="/img/main/partner/3.png" />
+                <img alt="" src="/img/main/partner/4.png" />
+                <img alt="" src="/img/main/partner/5.png" />
+                <img alt="" src="/img/main/partner/6.png" />
+                <img alt="" src="/img/main/partner/7.png" />
+                <img alt="" src="/img/main/partner/8.png" />
+                <img alt="" src="/img/main/partner/9.png" />
+                <img alt="" src="/img/main/partner/10.png" />
+                <img alt="" src="/img/main/partner/11.png" />
+                <img alt="" src="/img/main/partner/12.png" />
+                <img alt="" src="/img/main/partner/13.png" />
               </li>
               <li className="flex justify-end self-stretch gap-12  animate-[moveforeverR_30s_linear_infinite]">
-                <img src="/img/main/partner/14.png" />
-                <img src="/img/main/partner/15.png" />
-                <img src="/img/main/partner/16.png" />
-                <img src="/img/main/partner/17.png" />
-                <img src="/img/main/partner/18.png" />
-                <img src="/img/main/partner/19.png" />
-                <img src="/img/main/partner/20.png" />
-                <img src="/img/main/partner/21.png" />
-                <img src="/img/main/partner/22.png" />
-                <img src="/img/main/partner/23.png" />
-                <img src="/img/main/partner/24.png" />
-                <img src="/img/main/partner/25.png" />
-                <img src="/img/main/partner/26.png" />
-                <img src="/img/main/partner/27.png" />
-                <img src="/img/main/partner/28.png" />
-                <img src="/img/main/partner/29.png" />
-                <img src="/img/main/partner/14.png" />
-                <img src="/img/main/partner/15.png" />
-                <img src="/img/main/partner/16.png" />
-                <img src="/img/main/partner/17.png" />
-                <img src="/img/main/partner/18.png" />
-                <img src="/img/main/partner/19.png" />
-                <img src="/img/main/partner/20.png" />
-                <img src="/img/main/partner/21.png" />
-                <img src="/img/main/partner/22.png" />
-                <img src="/img/main/partner/23.png" />
-                <img src="/img/main/partner/24.png" />
-                <img src="/img/main/partner/25.png" />
-                <img src="/img/main/partner/26.png" />
-                <img src="/img/main/partner/27.png" />
-                <img src="/img/main/partner/28.png" />
-                <img src="/img/main/partner/29.png" />
+                <img alt="" src="/img/main/partner/14.png" />
+                <img alt="" src="/img/main/partner/15.png" />
+                <img alt="" src="/img/main/partner/16.png" />
+                <img alt="" src="/img/main/partner/17.png" />
+                <img alt="" src="/img/main/partner/18.png" />
+                <img alt="" src="/img/main/partner/19.png" />
+                <img alt="" src="/img/main/partner/20.png" />
+                <img alt="" src="/img/main/partner/21.png" />
+                <img alt="" src="/img/main/partner/22.png" />
+                <img alt="" src="/img/main/partner/23.png" />
+                <img alt="" src="/img/main/partner/24.png" />
+                <img alt="" src="/img/main/partner/25.png" />
+                <img alt="" src="/img/main/partner/26.png" />
+                <img alt="" src="/img/main/partner/27.png" />
+                <img alt="" src="/img/main/partner/28.png" />
+                <img alt="" src="/img/main/partner/29.png" />
+                <img alt="" src="/img/main/partner/14.png" />
+                <img alt="" src="/img/main/partner/15.png" />
+                <img alt="" src="/img/main/partner/16.png" />
+                <img alt="" src="/img/main/partner/17.png" />
+                <img alt="" src="/img/main/partner/18.png" />
+                <img alt="" src="/img/main/partner/19.png" />
+                <img alt="" src="/img/main/partner/20.png" />
+                <img alt="" src="/img/main/partner/21.png" />
+                <img alt="" src="/img/main/partner/22.png" />
+                <img alt="" src="/img/main/partner/23.png" />
+                <img alt="" src="/img/main/partner/24.png" />
+                <img alt="" src="/img/main/partner/25.png" />
+                <img alt="" src="/img/main/partner/26.png" />
+                <img alt="" src="/img/main/partner/27.png" />
+                <img alt="" src="/img/main/partner/28.png" />
+                <img alt="" src="/img/main/partner/29.png" />
               </li>
             </ol>
           </main>

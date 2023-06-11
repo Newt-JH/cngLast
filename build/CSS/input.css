@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-paragraph, footer, header{
+  font-family: "Pretendard";
+}
+@layer base {
+  /* 폰트 */
+.pretendard{@apply font-['pretendard'];}
+.comma{@apply font-['comma'];}
+.col-auto { @apply max-w-[100%] flex-[0_0_auto];}
+.col-1 { @apply max-w-[8.33333%] flex-[0_0_8.33333%];}
+.col-2 { @apply max-w-[16.66667%] flex-[0_0_16.66667%];}
+.col-3 { @apply max-w-[25%] flex-[0_0_25%];}
+.col-4 { @apply max-w-[33.33333%] flex-[0_0_33.33333%];}
+.col-5 { @apply max-w-[41.66667%] flex-[0_0_41.66667%];}
+.col-6 { @apply max-w-[50%] flex-[0_0_50%];}
+.col-7 { @apply max-w-[58%] flex-[0_0_58%];}
+.col-8 { @apply max-w-[66.7%] flex-[0_0_66.7%];}
+.col-9 { @apply max-w-[75%] flex-[0_0_75%];}
+.col-10 { @apply max-w-[83.33%] flex-[0_0_83.33%];}
+.col-11 { @apply max-w-[891.6%] flex-[0_0_91.6%];}
+.col-12 { @apply max-w-[100%] flex-[0_0_100%];}
+/*헤더*/
+header.header_main{@apply flex w-full absolute lg:fixed top-0 h-[80px] items-center z-[999] md:text-white text-lg font-medium transition-all lg:bg-transparent bg-white;}
+header{@apply flex w-full lg:fixed top-0 items-center z-[999] text-lg font-medium transition-all text-text1 bg-white py-2.5 rounded-none fixed h-[80px];}
+header.on{@apply text-text1 bg-white py-2.5 rounded-none fixed h-[60px];}
+header.on a.logo{@apply h-[50px];}
+header.header_main .logo_l_e{@apply lg:hidden;}
+header.on.header_main .logo_l_e{@apply block;}
+header.on.header_main .logo_d_e{@apply hidden;}
+
+header.on nav ol{@apply top-[70px] md:top-0;}
+nav ol{@apply md:flex flex-col md:flex-row justify-between md:h-full h-screen !px-0  md:max-w-[1300px] md:m-auto m-[0_0_0_auto] w-full transition-transform md:translate-x-0 translate-x-full bg-white md:bg-transparent top-[80px] md:top-0 absolute md:relative ;}
+nav ol.on{@apply translate-x-0 md:h-full h-screen bg-white;}
+nav ol li{@apply md:flex-grow text-center leading-[73px] md:col-2 border-b-[3px] md:border-b-0 border-solid bg-white md:bg-transparent;}
+nav ol li a{@apply flex text-center items-center justify-center h-[60px] hover:text-primary transition-all ;}
+/* nav .gnb:last-child a{@apply md:border-r;} */
+
+/* menu_close */
+.menu_close{@apply fixed top-0 left-0 w-full h-screen bg-black/80 z-[997] items-center justify-center;}
+
+/* 타이틀 */
+h1,h2,h3,h4,h5,h6{@apply font-bold;}
+h1,.h1{@apply text-6xl leading-[150%];} 
+h2,.h2{@apply text-5xl leading-[150%];}
+h3,.h3{@apply text-4xl leading-[150%];}
+h4,.h4{@apply text-3xl leading-[150%];}
+h5,.h5{@apply text-2xl leading-[150%];}
+h6,.h6{@apply text-xl leading-[150%];}
+
+  
+@media (max-width: 1300px) {
+  h1, .h1 {
+    font-size: calc(3rem + 0.5vw) !important;
+  }
+  h2, .h2 {
+    font-size: calc(2.25rem + 0.5vw) !important;
+  }
+  h3, .h3 {
+    font-size: calc(1.875rem + 0.5vw) !important;
+  }
+  h4, .h4 {
+    font-size: calc(1.5rem + 0.5vw) !important;
+  }
+  h5, .h5 {
+    font-size: calc(1.25rem + 0.5vw) !important;
+  } 
+  h6, .h6 {
+    font-size: 18px !important;
+  }
+  .text-lg{ font-size: 16px; word-break: break-all}
+
+}
+ 
+
+/* 햄버거 바 */
+.menu_icon{@apply inline-block h-[3px] w-[40px] leading-[80px] text-[50px] relative lg:bg-white bg-text1 rounded-xl;}
+.menu_icon:before{@apply inline-block h-[3px] w-[40px] absolute -top-3 left-0 content-[''] lg:bg-white bg-text1 transition-all rounded-xl;}
+.menu_icon:after{@apply inline-block h-[3px]  w-[40px] absolute -bottom-3 left-0 content-[''] lg:bg-white bg-text1 transition-all rounded-xl;}
+header.on .menu_icon, header.on .menu_icon:before, header.on .menu_icon::after{@apply bg-text1;}
+.btn_menu_btn.on .menu_icon{@apply bg-transparent;}
+.btn_menu_btn.on .menu_icon:before{@apply top-0 rotate-45;}
+.btn_menu_btn.on .menu_icon:after{@apply bottom-0 -rotate-45;}
+.tag{@apply flex  items-center px-3 py-1 rounded-[3px] bg-primary2 font-bold text-center text-white shadow-dropdown !text-sm;}
+/* 버튼 */
+.top_btn{@apply fixed z-10 hidden p-2 bg-white rounded-full shadow-lg sm:w-16 sm:h-16 w-10 h-10 text-primary2 sm:right-10 right-4 bottom-10;}
+
+/* footer */
+footer ol li strong{@apply min-w-[70px] mr-3;}
+
+/* 서브 1 */
+.ourService{@apply relative transition-all lg:col-4 lg:max-w-[350px] max-w-full w-full min-h-[350px] hover:border-[5px] hover:border-primary hover:text-white hover:shadow-lg after:content-[''] after:block after:bg-black/80 after:w-0 hover:after:w-full after:h-full after:absolute after:top-0 after:left-0 after:z-0 flex items-center;}
+.ourService >div{@apply relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 text-center transition-colors;}
+
+}
+/*서브2*/
+#tabs-nav li{@apply bg-white shadow-sm text-text1 hover:bg-[#F4F4F4] transition-all;}
+#tabs-nav li.active{@apply bg-primary shadow-sm text-white;}
+.product_bar.on{@apply shadow-lg;}
+
+
+.gradient1{@apply bg-gradient-to-b from-[#05CD82] to-[#000EFF]; }
+.gradient2{@apply bg-gradient-to-b from-[#A259FF] to-[#000EFF]; }
+
+.button{@apply flex justify-center items-center  w-48 h-12 gap-1.5 rounded-md text-lg font-medium  py-1 px-2 transition-all group-hover:shadow-button;}
+
+.button_bg{@apply text-white button bg-primary !w-[13rem];}
+nav .button_bg{@apply hidden lg:flex;}
+
+.button_stroke{@apply border border-solid button text-primary border-primary;}
+.btn_circle{@apply w-[140px] h-[140px] flex justify-center items-center gap-1 text-sm font-medium text-center text-white bg-primary rounded-full border-solid border-[10px] border-[#BBE4D8] hover:shadow-button transition-all;}
+.btn_circle div{@apply border w-24 h-24 border-white rounded-full leading-[96px];}
+
+/* main page*/
+.partner img{@apply drop-shadow-default-button;}
+
+
+/* 스와이퍼 */
+.swiper-pagination-bullet{@apply w-10 h-2 rounded-full bg-surfaceMid;}
+.swiper-pagination-bullet-active{@apply w-10 h-2 rounded-full bg-primary2;}
+
+header.on{@apply text-text1 bg-white py-2.5 rounded-none fixed h-[70px] shadow-lg;}
