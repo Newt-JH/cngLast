@@ -19,7 +19,7 @@ export default function SubPage3() {
             </h3>
             <div className="flex lg:gap-12 gap-4  mt-9">
               <a href="/Sub2_2" className="button_bg">
-                견적요정하기
+                견적 요청하기
                 <span className="material-icons-round">chevron_right</span>
               </a>
               <a href="/Sub2" className="button_stroke">
