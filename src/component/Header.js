@@ -33,7 +33,7 @@ export default function Header({ isMain = false }) {
         </li>
       </ol>
       <Link to="/Sub2_2" className="button_bg lg:flex">
-        문의 바로가기
+        견적 요청하기
         <span className="material-icons-round">chevron_right</span>
       </Link>
       <button
@@ -73,7 +73,7 @@ export default function Header({ isMain = false }) {
         href="/Sub2_2"
         className=" button_bg lg:flex"
       >
-        문의 바로가기
+        견적 요청하기
         <span className="material-icons-round">chevron_right</span>
       </a>
       <button

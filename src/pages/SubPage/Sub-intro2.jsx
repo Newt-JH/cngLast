@@ -10,7 +10,11 @@ export default function SubPage() {
   const [tabComment, setTabComment] = useState({
     title: "암롤박스",
     commentOne: "암롤트럭 후방에 적재하여",
-    commentTwo: "각종 폐기물 운반에 이용됩니다"
+    commentTwo: "각종 폐기물 운반에 이용됩니다",
+    commentThree: "아래 검색창에 제품 키워드를 입력하면",
+    commentFour: "해당 상품을 확인할 수 있습니다.",
+    commentFive: "EX) ○○루베, 양문형, 덮개 등",
+    img:"/img/introduce2/cg_bg_pc.png"
   });
 
   const handleSelect = (tab) => {
@@ -21,28 +25,44 @@ export default function SubPage() {
         setTabComment({
           title: "암롤박스",
           commentOne: "암롤트럭 후방에 적재하여",
-          commentTwo: "각종 폐기물 운반에 이용됩니다."
+          commentTwo: "각종 폐기물 운반에 이용됩니다.",
+          commentThree: "아래 검색창에 제품 키워드를 입력하면",
+          commentFour: "해당 상품을 확인할 수 있습니다.",
+          commentFive: "EX) ○○루베, 양문형, 덮개 등",
+          img:"/img/introduce2/cg_bg_pc.png"
         });
         break;
       case 'tab2':
         setTabComment({
-          title: "고철/스크랩",
-          commentOne: "다양한 적재물을 처리하는 박스",
-          commentTwo: "를 맞춤형 제작합니다."
+          title: "고철박스 / 스크랩박스 / 방통",
+          commentOne: "차량 운반용이 아닌 집게차 등 장비를 사용하여",
+          commentTwo: "내용물을 수집 할 수 있는 폐기물 박스 맞춤 제작",
+          commentThree: "아래 검색창에 제품 키워드를 입력하면",
+          commentFour: "해당 상품을 확인할 수 있습니다.",
+          commentFive: "EX) ○○루베, 양문형, 덮개 등",
+          img:"/img/main/scrabnox.png"
         });
         break;
       case 'tab3':
         setTabComment({
           title: "중고박스",
           commentOne: "보다 저렴한 가격의 폐기물 처리 박스",
-          commentTwo: "를 구매하실 수 있습니다."
+          commentTwo: "를 구매하실 수 있습니다.",
+          commentThree: "아래 검색창에 제품 키워드를 입력하면",
+          commentFour: "해당 상품을 확인할 수 있습니다.",
+          commentFive: "EX) ○○루베, 양문형, 덮개 등",
+          img:"/img/introduce2/cg_bg_pc.png"
         });
         break;
       case 'tab4':
         setTabComment({
           title: "박스수리",
           commentOne: "고장/파손된 박스를 수리하여",
-          commentTwo: "사용 가능합니다."
+          commentTwo: "사용 가능합니다.",
+          commentThree: "아래 검색창에 제품 키워드를 입력하면",
+          commentFour: "해당 상품을 확인할 수 있습니다.",
+          commentFive: "EX) ○○루베, 양문형, 덮개 등",
+          img:"/img/introduce2/cg_bg_pc.png"
         });
         break;
       default:
@@ -54,7 +74,7 @@ export default function SubPage() {
 
   const TAB_NAME = {
     tab1: "암롤박스",
-    tab2: "고철/스크랩",
+    tab2: "고철박스/스크랩박스/방통",
     tab3: "중고박스",
     tab4: "박스수리",
   };
@@ -66,10 +86,13 @@ export default function SubPage() {
           <h3 className="h3 font-bold">{ tabComment.title }</h3>
           <p className=" text-xl font-medium">
             {tabComment.commentOne} <br />
-            {tabComment.commentTwo}
+            {tabComment.commentTwo} <br /><br />
+            {tabComment.commentThree} <br />
+            {tabComment.commentFour} <br />
+            {tabComment.commentFive} <br />
           </p>
         </div>
-        <img alt="" src="/img/introduce2/cg_bg_pc.png" className="" />
+        <img alt="" src={ tabComment.img } className="" width='50%' />
       </div>
       <div className="container pt-9">
         <div className="mb-9 w-full after:content-[''] after:block after:clear-both h-12">
@@ -88,7 +111,7 @@ export default function SubPage() {
 
           <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
           <Link to ="/Sub2_1">
-            <img alt="" src="/img/introduce2/product.png" />
+              <img alt="" src='/img/introduce2/cg_bg_pc.png' />
             <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
               <h4 className="text-[32px] font-medium w-full">
                 25루베 슬러지 오니 암롤박스 1번
@@ -237,7 +260,7 @@ export default function SubPage() {
                 className="flex h-full w-full items-center px-6 py-4 justify-between"
                 onClick={() => handleSelect("tab2")}
               >
-                <p>고철/스크랩</p>
+                <p>고철박스/스크랩박스/방통</p>
                 <span className="material-icons-round rounded-md bg-white text-primary p-2 w-fit h-fit hidden lg:block">
                   north_east
                 </span>

@@ -9,9 +9,25 @@ export default function Footer() {
   return (
     <footer className="w-full lg:py-[150px] py-12 border-t-[3px] border-primary border-solid bg-white ">
       <div className="container flex justify-between lg:flex-row flex-col gap-10">
+        <div className="cn">
         <a className="logo lg:h-[60px] h-14">
           <img alt="" src="/img/logo_l_e.svg" className="h-full" />
         </a>
+        <li>
+          <ul className="">
+          <li className="">
+            <br /><br /><h5>입금은행</h5><br />
+            <ol className="flex flex-col gap-4 text-xl font-medium pt-6 text-text2">
+              <li className="flex lg:flex-col gap-2">
+                <strong className="min-w-[100px] inline-block">신한은행</strong>
+                <br />140-012-671367 <br />㈜씨앤지테크 박찬기
+                  </li>
+
+            </ol>
+          </li>
+          </ul>
+          </li>
+          </div>
         <ul className="flex justify-between lg:col-8 gap-4 flex-col lg:flex-row">
           <li className="">
             <h5>CONTACT</h5>
@@ -21,8 +37,8 @@ export default function Footer() {
                 경기도 평택시 서탄면 서탄2로 226
               </li>
               <li className="flex lg:flex-col gap-2">
-                <strong className="min-w-[100px] inline-block">Tel</strong>
-                031-668-8386
+                <strong className="min-w-[100px] inline-block">Tel, Fax</strong>
+                031-668-8386, 031-668-8387
               </li>
               <li className="flex lg:flex-col gap-2">
                 <strong className="min-w-[100px] inline-block">Mob</strong>
@@ -76,7 +92,7 @@ export default function Footer() {
                 style={{ display: openFamilySite ? "block" : "none" }}
               >
                 <li>
-                  <a href="/">크리샤 </a>
+                  <a href="/">크라샤 </a>
                 </li>
               </ul>
             </div>
@@ -95,11 +111,14 @@ export default function Footer() {
             <a href="">개인정보처리방침 | </a>
           </li>
           <li>
-            <a href="">  개인정보처리방침</a>
+            <a href=""> &nbsp;개인정보처리방침</a>
+          </li>
+          <li>
+            <p> &emsp;&emsp;사업자등록번호 : 409-81-01513 &nbsp;&nbsp; 대표:박찬기 &nbsp;&nbsp; 통신판매업신고번호: 제2021-경기송탄-0380호</p>
           </li>
         </ul>
         <div className="flex justify-between pt-9 lg:flex-row flex-col gap-4">
-          <p>Copyright © 2022 C&amp;G tech. All Rights Reserved.</p>
+          <p>Copyright © 2022 ㈜C&amp;G tech. All Rights Reserved.</p>
           <ul className="flex gap-4">
             <li>
               <a href="https://instagram.com/cgt0706?igshid=NTc4MTIwNjQ2YQ==">

@@ -38,7 +38,7 @@ export default function SubRental() {
               >
                 <h3 className="pb-[4.2vw]">
                   <span className="w-fit" style={{}}>
-                    C&amp;G테크 암롤박스 무료 렌탈 서비스
+                  ㈜C&amp;G테크 암롤박스 무료 렌탈 서비스
                   </span>
                 </h3>
                 <h4 className=" font-medium">
@@ -75,7 +75,7 @@ export default function SubRental() {
               >
                 <h3 className="pb-[4.2vw]">
                   <span className="w-fit" style={{}}>
-                    C&amp;G테크 암롤박스 유료 렌탈 서비스
+                  ㈜C&amp;G테크 암롤박스 유료 렌탈 서비스
                   </span>
                 </h3>
                 <h4 className=" font-medium">
@@ -123,7 +123,7 @@ export default function SubRental() {
               </li>
               <li className="flex self-stretch gap-4 flex-col h4 flex-grow">
                 <img alt="" src="/img/rental/notice.png" className="w-fit" />
-                04.<i>운송업 이용시 운송비 별도</i>
+                04.<i>운송업 이용시 화물비 별도</i>
               </li>
               <li className="flex self-stretch gap-4 flex-col h4 flex-grow">
                 <img alt="" src="/img/rental/notice.png" className="w-fit" />

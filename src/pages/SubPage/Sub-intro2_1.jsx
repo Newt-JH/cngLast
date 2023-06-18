@@ -138,7 +138,7 @@ export default function SubPage21() {
                 <div className="flex  items-center self-stretch ">
                   <div className="flex justify-center items-center  w-[138.5px] relative p-2.5 bg-white  border-r  border-[#a9abaa]">
                     <p className=" text-lg font-medium  text-[#131a15]">
-                      철판 두께
+                      제품 사양
                     </p>
                   </div>
                   <div className="flex justify-center items-center flex-grow relative gap-2.5 p-2.5">
@@ -210,7 +210,7 @@ export default function SubPage21() {
                     <img alt="" src="/img/introduce2/detail/truck.png" />
                     <p className=" text-base  text-[#131a15]">
                       <span className=" text-base  text-[#131a15]">
-                        큰 가격이 부담 스러우신가요?
+                        큰 가격이 부담스러우신가요?
                       </span>
                       <br />
                       <span className=" text-base font-bold  text-[#131a15]">
@@ -223,7 +223,7 @@ export default function SubPage21() {
                       href="/Sub2_2"
                       className=" w-[78px] h-[38px] rounded-md bg-white border border-[#c7d9d2] text-[15px] text-center py-2"
                     >
-                      렌탈문의
+                      견적 요청
                     </a>
                   </div>
                 </div>
@@ -255,7 +255,7 @@ export default function SubPage21() {
                     style={{ display: openDetailSelect1 ? "block" : "none" }}
                   >
                     <li>
-                      <a href="#!">크리샤 </a>
+                      <a href="#!">크라샤 </a>
                     </li>
                   </ul>
                 </div>
@@ -324,7 +324,7 @@ export default function SubPage21() {
                   style={{ display: openDetailSelect2 ? "block" : "none" }}
                 >
                   <li>
-                    <a href="#!">크리샤 </a>
+                    <a href="#!">크라샤 </a>
                   </li>
                 </ul>
               </div>

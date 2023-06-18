@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.cn {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.fadeInonscroll {transform: translateY(100px)  translateZ(0);transition-delay: .8s;transition: .8s;opacity: 0;}
+.inView {  opacity: 1;transform: translateY(0px) translateZ(0);}
+

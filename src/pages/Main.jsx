@@ -20,14 +20,14 @@ export default function Main() {
             <div className="flex items-center self-stretch lg:h-[915px] h-[50vh] overflow-hidden container">
               <div className="flex flex-col w-full gap-6">
                 <p className=" lg:text-7xl text-[7.8vw] font-bold text-white lg:text-left text-center">
-                  C&amp;G Technology
+                ㈜C&amp;G Technology
                   <br />
                   새로운 가치의 창조
                 </p>
                 <h4 className="font-medium text-center text-white lg:text-left lg:h4 h6">
                   특화된 기술력으로 고객가치를
                   <br />
-                  실현하는 C&amp;G TECH
+                  실현하는 ㈜C&amp;G TECH
                 </h4>
               </div>
             </div>
@@ -42,14 +42,14 @@ export default function Main() {
             <div className="flex items-center self-stretch lg:h-[915px] h-[50vh] overflow-hidden container">
               <div className="flex flex-col w-full gap-6">
                 <p className=" lg:text-7xl text-[7.8vw] font-bold text-white lg:text-left text-center">
-                  C&amp;G Technology
+                ㈜C&amp;G Technology
                   <br />
                   새로운 가치의 창조
                 </p>
                 <h4 className="font-medium text-center text-white lg:text-left lg:h4 h6">
                   특화된 기술력으로 고객가치를
                   <br />
-                  실현하는 C&amp;G TECH
+                  실현하는 ㈜C&amp;G TECH
                 </h4>
               </div>
             </div>
@@ -64,14 +64,14 @@ export default function Main() {
             <div className="flex items-center self-stretch lg:h-[915px] h-[50vh] overflow-hidden container">
               <div className="flex flex-col w-full gap-6">
                 <p className=" lg:text-7xl text-[7.8vw] font-bold text-white lg:text-left text-center">
-                  C&amp;G Technology
+                ㈜C&amp;G Technology
                   <br />
                   새로운 가치의 창조
                 </p>
                 <h4 className="font-medium text-center text-white lg:text-left lg:h4 h6">
                   특화된 기술력으로 고객가치를
                   <br />
-                  실현하는 C&amp;G TECH
+                  실현하는 ㈜C&amp;G TECH
                 </h4>
               </div>
             </div>
@@ -89,12 +89,12 @@ export default function Main() {
               <p className="sm:text-[40px] text-[24px] font-bold text-center gradient1 text_clip">
                 특화된 기술력으로 고객가치를
                 <br />
-                실현하는 C&amp;G TECH
+                실현하는 ㈜C&amp;G TECH
               </p>
               <img alt="" src="/img/main/smile.png" />
               <p className="font-medium text-center lg:text-xl ">
                 암롤박스의 특화된 기술력으로 깨끗하고 쾌적한 환경을 만들기 위해
-                <br /> 그 어떤 종류의 폐기물도 처리가능한 C&amp;G TEC 만의 제작
+                <br /> 그 어떤 종류의 폐기물도 처리가능한 ㈜C&amp;G TEC 만의 제작
                 기술력을 제공합니다.
               </p>
             </div>
@@ -162,7 +162,7 @@ export default function Main() {
                       암롤박스
                     </h3>
                     <p className="text-lg font-medium text-paragraph">
-                      다량의 산업/건설 폐기물 처리 및 맞춤형 제작
+                      다양한 종류의 폐기물 운반용 암롤박스 맞춤 제작
                     </p>
                   </div>
                   <button className="button_stroke">
@@ -184,10 +184,10 @@ export default function Main() {
                         <i className="tag bg-point1">Hot</i>
                         <i className="tag">New</i>
                       </div>
-                      스크랩박스
+                      고철박스 / 스크랩박스 / 방통
                     </h3>
                     <p className="text-lg font-medium text-paragraph">
-                    다양한 적재물 처리 박스 맞춤형 제작
+                    차량 운반용이 아닌 집게차 등 장비를 사용하여 < br/> 내용물을 수집 할 수 있는 폐기물 박스 맞춤 제작
                     </p>
                   </div>
                   <button className="button_stroke">
@@ -248,7 +248,7 @@ export default function Main() {
                       박스수리
                     </h3>
                     <p className="text-lg font-medium text-paragraph">
-                    고장/파손된 박스 수리
+                    고장/파손된 제품 수리
                     </p>
                   </div>
                   <button className="button_stroke">
