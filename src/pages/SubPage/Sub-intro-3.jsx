@@ -41,7 +41,7 @@ export default function SubPage3() {
           >
             자주묻는질문
           </h3>
-          <span className="float-right flex rounded-md overflow-hidden border">
+          {/* <span className="float-right flex rounded-md overflow-hidden border">
             <input
               className="outline-none p-3 w-[250px]"
               type="text"
@@ -50,7 +50,7 @@ export default function SubPage3() {
             <button className="material-icons-round bg-primary2 text-white p-3 focus:ring-0">
               search
             </button>
-          </span>
+          </span> */}
         </div>
         <div
           id="accordionExample"

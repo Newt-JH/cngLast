@@ -1,12 +1,66 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TopButton from "../../component/TopButton";
 import Header from "../../component/Header";
 import Footer from "../../component/Footer";
+import axios from "axios";
+import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 export default function SubPage21() {
+  const location = useLocation();
+
+  // URLSearchParams를 사용하여 쿼리 문자열 파싱
+  const queryParams = new URLSearchParams(location.search);
+
+  // 쿼리 문자열에서 productID 가져오기
+  const productID = queryParams.get('productID');
+  console.log(productID);
+
   const [openDetailSelect1, setOpenDetailSelect1] = useState(false);
   const [openDetailSelect2, setOpenDetailSelect2] = useState(false);
+  const [product, setProduct] = useState({
+    name: '이름',
+    length: 10,
+    width: 10,
+    depth: 10,
+    steelPlate: 100,
+    description: ' 설명하는 부분 ',
+    contents: '컨텐츠',
+    titleImage: '/image'
+  });
+  const [productImage, setProductImage] = useState([
+    { imageLink: '/s' },
+    { imageLink: '/s' },
+    { imageLink: '/s' },
+    { imageLink: '/s' },
+    { imageLink: '/s' },
+  ]);
 
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(`https://worldwide-gabriellia-cngtech.koyeb.app/product?productID=${productID}`);
+      console.log(response);
+      setProduct(response.data[0]);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  const fetchData2 = async () => {
+    try {
+      const response = await axios.get(`https://worldwide-gabriellia-cngtech.koyeb.app/productImage?productID=${productID}`);
+      console.log(response.data);
+      setProductImage(response.data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+    fetchData2();
+  }, [productID]);
+  
   return (
     <>
       <TopButton />
@@ -17,7 +71,7 @@ export default function SubPage21() {
           <div className="flex  self-stretch  overflow-hidden pb-[30px] swiper mySwiper2 w-full">
             <ul className=" swiper-wrapper ">
               <li className="relative overflow-hidden bg-black/50 swiper-slide group transition-all">
-                <img alt="" src="/img/introduce2/product.png" className="h-full" />
+                <img alt="" src={ product.titleImage } className="h-full" />
                 <a className="absolute left-[212px] top-[270px] gap-3 px-[30px] py-4 rounded-md border border-white group-hover:flex hidden text-[22px] font-bold  text-white transition">
                   More View
                   <i className=" text-lg text-center text-white material-icons-round">
@@ -62,18 +116,12 @@ export default function SubPage21() {
           </div>
           <div thumbsslider="" className="swiper mySwiper w-full">
             <ul className="swiper-wrapper">
-              <li className="flex bg-[url('a.png')] !w-[100px] h-[100px] border border-[#5e635f] swiper-slide overflow-hidden">
-                <img alt="" src="/img/introduce2/product.png" className="w-full" />
-              </li>
-              <li className="flex bg-[url('a.png')] !w-[100px] h-[100px] border border-[#5e635f] swiper-slide">
-                <img alt="" className="  " src="80.png" />
-              </li>
-              <li className="flex bg-[url('a.png')] !w-[100px] h-[100px] border border-[#5e635f] swiper-slide">
-                <img alt="" className="  " src="80.png" />
-              </li>
-              <li className="flex bg-[url('a.png')] !w-[100px] h-[100px] border border-[#5e635f] swiper-slide">
-                <img alt="" className="  " src="80.png" />
-              </li>
+                        {productImage.map((image, index) => (
+              // <li key={index} className="flex bg-no-repeat bg-cover w-[100px] h-[100px] border border-[#5e635f] swiper-slide overflow-hidden" style={{ backgroundImage: `url(${image.imageLink})` }}>
+              //   <img alt="" src={image.imageLink} className="w-full" />
+              // </li>
+                          <img src={image.imageLink} style={{width: 100/productImage.length+'%'}}/>
+            ))}
             </ul>
           </div>
         </div>
@@ -112,7 +160,7 @@ export default function SubPage21() {
             <div className="flex flex-col  self-stretch  relative gap-[19px]">
               <div className=" w-[480px] h-9 relative overflow-hidden">
                 <p className="absolute left-0 top-0 text-[26px] font-medium  text-[#131a15]">
-                  25루베 슬러지 오니 암롤박스
+                  { product.name }
                 </p>
               </div>
               <div className="flex  self-stretch  relative gap-2.5 pb-1.5  border-r-0 border-b border-l-0 border-[#a9abaa]">
@@ -126,23 +174,23 @@ export default function SubPage21() {
                     </p>
                   </div>
                   <div className="flex justify-center items-center self-stretch flex-grow relative gap-2.5 p-2.5  border-r  border-[#a9abaa]">
-                    <p className=" text-sm font-medium  text-[#a9abaa]">5800</p>
+                    <p className=" text-sm font-medium  text-[#a9abaa]">{ product.length }</p>
                   </div>
                   <div className="flex justify-center items-center self-stretch flex-grow relative gap-2.5 p-2.5  border-r  border-[#a9abaa]">
-                    <p className=" text-sm font-medium  text-[#a9abaa]">5800</p>
+                    <p className=" text-sm font-medium  text-[#a9abaa]">{ product.width }</p>
                   </div>
                   <div className="flex justify-center items-center self-stretch flex-grow relative gap-2.5 p-2.5">
-                    <p className=" text-sm font-medium  text-[#a9abaa]">5800</p>
+                    <p className=" text-sm font-medium  text-[#a9abaa]">{ product.depth }</p>
                   </div>
                 </div>
                 <div className="flex  items-center self-stretch ">
                   <div className="flex justify-center items-center  w-[138.5px] relative p-2.5 bg-white  border-r  border-[#a9abaa]">
                     <p className=" text-lg font-medium  text-[#131a15]">
-                      제품 사양
+                      철판 두께
                     </p>
                   </div>
                   <div className="flex justify-center items-center flex-grow relative gap-2.5 p-2.5">
-                    <p className=" text-sm font-medium  text-[#a9abaa]">5800</p>
+                    <p className=" text-sm font-medium  text-[#a9abaa]">{ product.steelPlate }</p>
                   </div>
                 </div>
               </div>
@@ -255,7 +303,7 @@ export default function SubPage21() {
                     style={{ display: openDetailSelect1 ? "block" : "none" }}
                   >
                     <li>
-                      <a href="#!">크라샤 </a>
+                      <p> {product.description} </p>
                     </li>
                   </ul>
                 </div>
@@ -294,8 +342,7 @@ export default function SubPage21() {
                   </p>
                 </div>
               </div>
-              {/* 여기 세부 상품이미지 첨부 
-      <img class="" src="20221218g2.png.png"/> */}
+              <div dangerouslySetInnerHTML={{ __html: product.contents }}></div>
             </div>
           </div>
           <div className="flex flex-col p-4 col-3 product_bar top-[10vh] right-0 bg-white z-10 transition-all ">
@@ -324,7 +371,7 @@ export default function SubPage21() {
                   style={{ display: openDetailSelect2 ? "block" : "none" }}
                 >
                   <li>
-                    <a href="#!">크라샤 </a>
+                    <p>{product.description} </p>
                   </li>
                 </ul>
               </div>

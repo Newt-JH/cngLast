@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TopButton from "../../component/TopButton";
 import Header from "../../component/Header";
 import Footer from "../../component/Footer";
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 export default function SubPage() {
   const [openSelectBox, setOpenSelectBox] = useState(false);
   const [select, setSelect] = useState("tab1");
+  const [category, setCategory] = useState(1);
   const [tabComment, setTabComment] = useState({
     title: "암롤박스",
     commentOne: "암롤트럭 후방에 적재하여",
@@ -17,6 +19,35 @@ export default function SubPage() {
     img:"/img/introduce2/cg_bg_pc.png"
   });
 
+  const [productList, setProductList] = useState([{
+    productID: '1',
+    name: '25루베 뭐시기 상품',
+    hashtag: '건설폐기물 양문형',
+    createDateTime: '2023.06.11',
+    titleImage: '/img/introduce2/cg_bg_pc.png'
+  },
+  {
+    productID: '2',
+    title: '25루베 뭐시기 상품 2번',
+    hashtag: '건설폐기물 양문형',
+    createDateTime: '2023.06.16',
+    imageLink: '/img/introduce2/cg_bg_pc.png'
+    }]);
+  
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`https://worldwide-gabriellia-cngtech.koyeb.app/category?category=${category}`);
+        console.log(response);
+        setProductList(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+  
+    useEffect(() => {
+      fetchData();
+    },[category])
+  
   const handleSelect = (tab) => {
     setSelect(tab);
     
@@ -31,6 +62,7 @@ export default function SubPage() {
           commentFive: "EX) ○○루베, 양문형, 덮개 등",
           img:"/img/introduce2/cg_bg_pc.png"
         });
+        setCategory(1);
         break;
       case 'tab2':
         setTabComment({
@@ -42,6 +74,7 @@ export default function SubPage() {
           commentFive: "EX) ○○루베, 양문형, 덮개 등",
           img:"/img/main/scrabnox.png"
         });
+        setCategory(2);
         break;
       case 'tab3':
         setTabComment({
@@ -53,6 +86,7 @@ export default function SubPage() {
           commentFive: "EX) ○○루베, 양문형, 덮개 등",
           img:"/img/introduce2/cg_bg_pc.png"
         });
+        setCategory(3);
         break;
       case 'tab4':
         setTabComment({
@@ -64,6 +98,7 @@ export default function SubPage() {
           commentFive: "EX) ○○루베, 양문형, 덮개 등",
           img:"/img/introduce2/cg_bg_pc.png"
         });
+        setCategory(4);
         break;
       default:
         // 기본 동작
@@ -95,7 +130,7 @@ export default function SubPage() {
         <img alt="" src={ tabComment.img } className="" width='50%' />
       </div>
       <div className="container pt-9">
-        <div className="mb-9 w-full after:content-[''] after:block after:clear-both h-12">
+        {/* <div className="mb-9 w-full after:content-[''] after:block after:clear-both h-12">
           <span className="float-right flex rounded-md overflow-hidden border">
             <input
               className="outline-none p-3 w-[250px]"
@@ -106,78 +141,32 @@ export default function SubPage() {
               search
             </button>
           </span>
-        </div>
+        </div> */}
         <ol className="flex gap-9 flex-wrap">
-
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-          <Link to ="/Sub2_1">
-              <img alt="" src='/img/introduce2/cg_bg_pc.png' />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스 1번
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                2023.06.11
-                </p>
+        {productList.map((product, index) => (
+        <li key={index} className="flex flex-col overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
+            <Link to={`/Sub2_1?productID=${product.productID}`}>
+              <div style={{ display: 'flex', height: '80vh', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <img alt="" src={product.titleImage} style={{ height: '100%' }} />
+                </div>
+                <div className="flex flex-col items-end self-stretch overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
+                  <h4 className="text-[32px] font-medium w-full">
+                    {product.name}
+                  </h4>
+                  <div className="flex justify-between items-end w-full">
+                    <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2 font-bold text-primary2">
+                      # {product.hashTag}
+                    </i>
+                    <p className="text-sm font-medium text-paragraph">
+                    {product.createDateTime.slice(0, 10)}
+                    </p>
+                  </div>
+                </div>
               </div>
-              </div>
-              </Link>
-            </li>
-
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-          <Link to ="/Sub2_1">
-            <img alt="" src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스 2번
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2023.06.11
-                </p>
-              </div>
-              </div>
-              </Link>
-          </li>
-          {/* <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img alt="" src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
-              </div>
-            </div>
-          </li>
-          <li className="flex flex-col  overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <img alt="" src="/img/introduce2/product.png" />
-            <div className="flex flex-col  items-end self-stretch  overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-              <h4 className="text-[32px] font-medium w-full">
-                25루베 슬러지 오니 암롤박스
-              </h4>
-              <div className="flex justify-between items-end w-full">
-                <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2  font-bold  text-primary2">
-                  #건설폐기물 양문형
-                </i>
-                <p className=" text-sm font-medium  text-paragraph">
-                  2022.00.00
-                </p>
-              </div>
-            </div>
-          </li> */}
+            </Link>
+        </li>
+      ))} 
         </ol>
       </div>
       <a

@@ -105,9 +105,9 @@ export default function SubRental() {
           </div>
         </section>
         {/* 3 */}
-        <section className="py-20">
+        
+        {/* <section className="py-20">
           <main className="container relative flex flex-col justify-center gap-20 overflow-hidden">
-            <h2 className="">주의사항</h2>
             <ol className="flex self-stretch flex-grow gap-20 flex-wrap font-medium">
               <li className="flex self-stretch gap-4 flex-col h4 flex-grow">
                 <img alt="" src="/img/rental/notice.png" className="w-fit" />
@@ -131,8 +131,10 @@ export default function SubRental() {
               </li>
             </ol>
           </main>
-        </section>
+        </section> */}
         {/* 4 */}
+        {/* <h2 className="">주의사항</h2> */}
+            <img src="./img/cngOrder.png" style={{width:'100%'}}/>
         <Footer />
       </div>
     </>

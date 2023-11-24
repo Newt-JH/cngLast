@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../component/Footer";
 import Header from "../component/Header";
 import TopButton from "../component/TopButton";
+import axios from 'axios';
 
 export default function Main() {
+
+  const [productStatus, setProductStatus] = useState({
+    releaseCount: 3,
+    usedCount: 0,
+    rentalCount: 0
+  })
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('https://worldwide-gabriellia-cngtech.koyeb.app/productstatus');
+      console.log(response);
+      setProductStatus(response.data[0]);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  },[])
   return (
     <>
       <TopButton />
@@ -309,7 +330,7 @@ export default function Main() {
                 <ol className="flex flex-col justify-center  self-stretch flex-grow lg:gap-[15px] gap-12">
                   <li className="flex flex-col items-center self-stretch gap-4 lg:flex-row">
                     <p className="rounded-full sm:text-[40px] text-[30px] font-bold w-24 h-24 flex items-center  justify-center bg-white shadow-1">
-                      <i className="gradient2 text_clip">21</i>
+                      <i className="gradient2 text_clip">{productStatus.releaseCount }</i>
                     </p>
                     <div className="flex items-center justify-center flex-grow gap-2 lg:flex-col">
                       <img alt="" src="/img/main/about_us_checkbox.png" />
@@ -318,7 +339,7 @@ export default function Main() {
                   </li>
                   <li className="flex flex-col items-center self-stretch gap-4 lg:flex-row">
                     <p className="rounded-full sm:text-[40px] text-[30px] font-bold w-24 h-24 flex items-center  justify-center bg-white shadow-1">
-                      <i className="gradient2 text_clip">27</i>
+                      <i className="gradient2 text_clip">{ productStatus.rentalCount }</i>
                     </p>
                     <div className="flex items-center justify-center flex-grow gap-2 lg:flex-col">
                       <img alt="" src="/img/main/about_us_checkbox.png" />
@@ -327,7 +348,7 @@ export default function Main() {
                   </li>
                   <li className="flex flex-col items-center self-stretch gap-4 lg:flex-row">
                     <p className="rounded-full sm:text-[40px] text-[30px] font-bold w-24 h-24 flex items-center  justify-center bg-white shadow-1">
-                      <i className="gradient2 text_clip">11</i>
+                      <i className="gradient2 text_clip">{ productStatus.usedCount }</i>
                     </p>
                     <div className="flex items-center justify-center flex-grow gap-2 lg:flex-col">
                       <img alt="" src="/img/main/about_us_checkbox.png" />
