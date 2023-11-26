@@ -343,7 +343,7 @@ export default function Main() {
                     </p>
                     <div className="flex items-center justify-center flex-grow gap-2 lg:flex-col">
                       <img alt="" src="/img/main/about_us_checkbox.png" />
-                      <p className="text-lg font-medium ">렌탈가능</p>
+                      <p className="text-lg font-medium ">렌탈 가능</p>
                     </div>
                   </li>
                   <li className="flex flex-col items-center self-stretch gap-4 lg:flex-row">

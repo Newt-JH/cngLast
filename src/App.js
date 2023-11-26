@@ -9,6 +9,7 @@ import Sub22 from "./pages/SubPage/Sub-intro2_2";
 import Sub3 from "./pages/SubPage/Sub-intro-3";
 import ScrollToTop from "./component/ScrollToTop";
 import SubRental from "./pages/SubPage/Sub-rental";
+import ProductInsertCng from "./pages/productInsertCng";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
         <Route path="/Sub2_1" element={<Sub21 />} />
         <Route path="/Sub2_2" element={<Sub22 />} />
         <Route path="/Sub3" element={<Sub3 />} />
-        <Route path="/Rental" element={<SubRental />} />
+          <Route path="/Rental" element={<SubRental />} />
+          <Route path="/productInsertCng" element={<ProductInsertCng />} />
       </Routes>
       </BrowserRouter>
       </>

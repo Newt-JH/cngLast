@@ -1,18 +1,150 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TopButton from "../../component/TopButton";
 import Header from "../../component/Header";
 import Footer from "../../component/Footer";
+import axios from "axios";
 
 export default function SubPage22() {
   const [selectTab, setSelectTab] = useState("tab1");
   const [selectTab2, setSelectTab2] = useState("tab1");
+  const [productContact, setProductContact] = useState({
+    contactType: '제품구매',
+    productType: '암롤박스',
+    contactOption: '견적문의',
+    contents: '',
+    phone: '',
+    partnerName: '',
+    email: ''
+  });
+
+  const handleContentChange = (event) => {
+    const { value } = event.target;
+    setProductContact((prevContact) => ({
+      ...prevContact,
+      contents: value,
+    }));
+  };
+
+  const handleContentChangeName = (event) => {
+    const { value } = event.target;
+    setProductContact((prevContact) => ({
+      ...prevContact,
+      partnerName: value,
+    }));
+  };
+
+  const handleContentChangePhone = (event) => {
+    const { value } = event.target;
+    setProductContact((prevContact) => ({
+      ...prevContact,
+      phone: value,
+    }));
+  };
+
+  const handleContentChangeEmail = (event) => {
+    const { value } = event.target;
+    setProductContact((prevContact) => ({
+      ...prevContact,
+      email: value,
+    }));
+  };
+  const fetchData = async () => {
+    try {
+      // const response = await axios.post(`https://worldwide-gabriellia-cngtech.koyeb.app/contactInsert`);
+      const response = await axios.post(`http://localhost:3001/contactInsert`, productContact);
+      alert('문의가 완료되었습니다.');
+      console.log(response);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      alert('문의를 처리하는 도중 오류가 발생했습니다.');
+    }
+  };
 
   const handleSelectTab = (tab) => {
     setSelectTab(tab);
+    switch (tab) {
+      case 'tab1':
+        setProductContact(prevState => ({
+        ...prevState,
+        contactType: '제품구매'
+        }))
+        break;
+      case 'tab2':
+          setProductContact(prevState => ({
+          ...prevState,
+          contactType: '중고판매'
+          }))
+        break;
+        case 'tab3':
+          setProductContact(prevState => ({
+          ...prevState,
+          contactType: '제품수리'
+          }))
+        break;
+        case 'tab4':
+          setProductContact(prevState => ({
+          ...prevState,
+          contactType: '렌탈대여'
+          }))
+        break;
+      default:
+      setProductContact(prevState => ({
+      ...prevState,
+      contactType: '제품구매'
+      }))
+    break;
+    }
   };
+
+  const handleSelectTab3 = (tab) => {
+    switch (tab) {
+      case 'tab1':
+        setProductContact(prevState => ({
+        ...prevState,
+        productType: '암롤박스'
+        }))
+        break;
+      case 'tab2':
+          setProductContact(prevState => ({
+          ...prevState,
+          productType: '고철박스 / 스크랩박스 / 방통'
+          }))
+        break;
+      default:
+      setProductContact(prevState => ({
+      ...prevState,
+      productType: '암롤박스'
+      }))
+    break;
+    }
+  };
+
+  const sendDataMy = () => {
+    fetchData();
+  }
 
   const handleSelectTab2 = (tab) => {
     setSelectTab2(tab);
+    switch (tab) {
+      case 'tab1':
+        setProductContact(prevState => ({
+        ...prevState,
+        contactOption: '견적문의'
+        }))
+        break;
+      case 'tab2':
+          setProductContact(prevState => ({
+          ...prevState,
+          contactOption: '현장방문'
+          }))
+        break;
+      default:
+      setProductContact(prevState => ({
+      ...prevState,
+      contactOption: '견적문의'
+      }))
+    break;
+    }
   };
   return (
     <>
@@ -99,18 +231,18 @@ export default function SubPage22() {
           </p>
         </div>
         <ol className="flex gap-9 flex-col lg:flex-row">
-          <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]">
+          <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]" onClick={() => {handleSelectTab3('tab1')} }>
             <img alt="" src="/img/introduce2/product.png" />
             <h5 className="pt-[30px] font-medium w-full">암롤박스</h5>
           </li>
-          <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]">
+          <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]" onClick={() => {handleSelectTab3('tab2')} }>
             <img alt="" src="/img/introduce2/product.png" />
-            <h5 className="pt-[30px] font-medium w-full">암롤박스</h5>
+            <h5 className="pt-[30px] font-medium w-full">고철박스 / 스크랩박스 / 방통</h5>
           </li>
-          <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]">
+          {/* <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]">
             <img alt="" src="/img/introduce2/product.png" />
-            <h5 className="pt-[30px] font-medium w-full">암롤박스</h5>
-          </li>
+            <h5 className="pt-[30px] font-medium w-full">수리</h5>
+          </li> */}
         </ol>
       </div>
       {/* 2 */}
@@ -178,7 +310,8 @@ export default function SubPage22() {
               name="InquiryContent"
               placeholder="500자 이내로 상세내용을 입력해 주세요."
               style={{ height: 300 }}
-              defaultValue={""}
+              value={productContact.contents}
+              onChange={handleContentChange}
             />
           </li>
           <li className="self-stretch flex-grow h-[75px] shadow-md rounded-md overflow-hidden">
@@ -188,6 +321,8 @@ export default function SubPage22() {
               name="InquiryCompany"
               placeholder="이름 및 기업이름을 입력하세요."
               className="h-full w-full p-4 outline-none"
+              value={productContact.partnerName}
+              onChange={handleContentChangeName}
             />
           </li>
           <li className="self-stretch flex-grow h-[75px] shadow-md rounded-md overflow-hidden">
@@ -197,6 +332,8 @@ export default function SubPage22() {
               name="InquiryCompany"
               placeholder="전화번호(’-’ 제외)을 입력하세요."
               className="h-full w-full p-4 outline-none"
+              value={productContact.phone}
+              onChange={handleContentChangePhone}
             />
           </li>
           <li className="self-stretch flex-grow h-[75px] shadow-md rounded-md overflow-hidden">
@@ -206,6 +343,8 @@ export default function SubPage22() {
               name="InquiryCompany"
               placeholder="이메일 주소을 입력하세요."
               className="h-full w-full p-4 outline-none"
+              value={productContact.email}
+              onChange={handleContentChangeEmail}
             />
           </li>
           <li className="self-stretch flex-grow  py-5 ">
@@ -528,12 +667,12 @@ export default function SubPage22() {
             </span>
           </li>
         </ul>
-        <a
-          href="/Sub2_2"
+        <div
           className=" button_bg lg:flex mx-auto mt-12 !bg-primary2 !w-[320px] !h-16"
+          onClick={sendDataMy}
         >
-          문의하기
-        </a>
+            문의하기
+        </div>
       </div>
       {/* 4 */}
       <Footer />
