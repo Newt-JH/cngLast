@@ -176,8 +176,8 @@ const YourEditorComponent = () => {
             imageList: imageList
         }
         console.log(data)
-    // const response = await axios.post(`https://worldwide-gabriellia-cngtech.koyeb.app/productInsert`);
-        const response = await axios.post(`http://localhost:3001/productInsert`, data);
+    const response = await axios.post(`https://worldwide-gabriellia-cngtech.koyeb.app/productInsert`,data);
+        // const response = await axios.post(`http://localhost:3001/productInsert`, data);
         
     alert('제품 등록 완료');
     console.log(response);

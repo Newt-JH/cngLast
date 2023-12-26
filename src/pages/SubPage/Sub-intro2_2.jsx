@@ -50,8 +50,8 @@ export default function SubPage22() {
   };
   const fetchData = async () => {
     try {
-      // const response = await axios.post(`https://worldwide-gabriellia-cngtech.koyeb.app/contactInsert`);
-      const response = await axios.post(`http://localhost:3001/contactInsert`, productContact);
+      const response = await axios.post(`https://worldwide-gabriellia-cngtech.koyeb.app/contactInsert`,productContact);
+      // const response = await axios.post(`http://localhost:3001/contactInsert`, productContact);
       alert('문의가 완료되었습니다.');
       console.log(response);
     } catch (error) {
