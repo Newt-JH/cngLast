@@ -41,6 +41,8 @@ const YourEditorComponent = () => {
   const pass = atob(base64String2);
 
   const handleImageUpload = async (file) => {
+    let formData = new FormData();
+    formData.append('file', file);  // 파일을 FormData에 추가
     // AWS S3 설정
     const s3 = new AWS.S3({
       accessKeyId: id,
@@ -52,7 +54,7 @@ const YourEditorComponent = () => {
     const params = {
       Bucket: 'cngtech',  // 여기에 본인의 S3 버킷 이름을 지정해주세요.
       Key: `images/${Date.now()}_${Math.floor(Math.random() * 1000)}.png`,
-      Body: file,
+      Body: formData.get('file'),  // Blob 표현을 얻어옴
       ACL: 'public-read',
         ContentType: file.type,
         ContentDisposition: 'inline',  // 이 부분을 추가합니다.
@@ -135,7 +137,7 @@ const YourEditorComponent = () => {
     const imageUrl3 = imageFile3 ? await handleImageUpload(imageFile3) : null;
     const imageUrl4 = imageFile4 ? await handleImageUpload(imageFile4) : null;
     const imageUrl5 = imageFile5 ? await handleImageUpload(imageFile5) : null;
-      const imageUrl6 = imageFile6 ? await handleImageUpload(imageFile6) : null;
+    const imageUrl6 = imageFile6 ? await handleImageUpload(imageFile6) : null;
 
       const imageList = [
         imageUrl2,
@@ -150,11 +152,13 @@ const YourEditorComponent = () => {
     // 여기에서 서버에 글 등록 요청을 보내고, content와 imageUrl를 전달합니다.
     // 서버에서는 해당 데이터를 DB에 저장하거나 다른 처리를 수행할 수 있습니다.
     console.log('Content:', content);
-      console.log('Image URL:', imageUrl);
-      await fetchData();
+    console.log('Image URL:', imageUrl);
+    console.log('Image List: ', imageList);
+
+    await fetchData(imageUrl, imageList);
   };
     
-  const fetchData = async () => {
+  const fetchData = async (imageUrl, imageList) => {
     try {
 
         console.log(imageList);
@@ -162,7 +166,7 @@ const YourEditorComponent = () => {
             name: formData.name,
             category: formData.category,
             hashtag: formData.hashtag,
-            titleImage: titleImage,
+            titleImage: imageUrl,
             length: formData.length,
             width: formData.width,
             depth: formData.depth,
@@ -290,7 +294,11 @@ const YourEditorComponent = () => {
         modules={{ toolbar: [['bold', 'italic', 'underline', 'strike'], ['list', 'bullet'], ['link', 'image'], ['clean']] }}
         formats={['bold', 'italic', 'underline', 'strike', 'list', 'bullet', 'link', 'image']}
       />
-      <button onClick={handlePublish}>글 등록</button>
+      <button onClick={async() => {
+        await handlePublish()
+        // await fetchData();
+      }
+      }>글 등록</button>
     </div>
   );
 };

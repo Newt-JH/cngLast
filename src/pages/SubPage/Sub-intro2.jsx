@@ -44,6 +44,10 @@ export default function SubPage() {
       }
     };
   
+  const moreItem = () => {
+    alert('추가로 불러올 상품이 없습니다.');
+  }
+  
     useEffect(() => {
       fetchData();
     },[category])
@@ -142,39 +146,40 @@ export default function SubPage() {
             </button>
           </span>
         </div> */}
-        <ol className="flex gap-9 flex-wrap">
-        {productList.map((product, index) => (
-        <li key={index} className="flex flex-col overflow-hidden bg-white self-stretch flex-grow lg:w-[calc(50%-18px)]">
-            <Link to={`/Sub2_1?productID=${product.productID}`}>
-              <div style={{ display: 'flex', height: '80vh', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <div>
-                  <img alt="" src={product.titleImage} style={{ height: '100%' }} />
-                </div>
-                <div className="flex flex-col items-end self-stretch overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
-                  <h4 className="text-[32px] font-medium w-full">
-                    {product.name}
-                  </h4>
-                  <div className="flex justify-between items-end w-full">
-                    <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2 font-bold text-primary2">
-                      # {product.hashTag}
-                    </i>
-                    <p className="text-sm font-medium text-paragraph">
-                    {product.createDateTime.slice(0, 10)}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </Link>
-        </li>
-      ))} 
-        </ol>
+        <ol className="grid grid-cols-2 gap-9">
+  {productList.map((product, index) => (
+    <li key={index} className="flex flex-col overflow-hidden bg-white self-stretch flex-grow">
+      <Link to={`/Sub2_1?productID=${product.productID}`}>
+        <div style={{ display: 'flex', width: '100%', height: '80vh', flexDirection: 'column', justifyContent: 'space-between' }}>
+          <div>
+            <img alt="" src={product.titleImage} style={{ width: '100%' }} />
+          </div>
+          <div className="flex flex-col items-end self-stretch overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
+            <h4 className="text-[32px] font-medium w-full">
+              {product.name}
+            </h4>
+            <div className="flex justify-between items-end w-full">
+              <i className="flex justify-center items-center gap-3 px-[25px] py-2 rounded-[100px] border border-primary2 font-bold text-primary2">
+                # {product.hashTag}
+              </i>
+              <p className="text-sm font-medium text-paragraph">
+                {product.createDateTime.slice(0, 10)}
+              </p>
+            </div>
+          </div>
+        </div>
+      </Link>
+    </li>
+  ))}
+</ol>
       </div>
-      <a
+      <button
         href="/"
         className=" button_bg lg:flex mx-auto mt-12 !bg-primary2 !w-[320px] !h-16"
+        onClick={moreItem}
       >
         더보기 <span className="material-icons-round">expand_more</span>
-      </a>
+      </button>
     </li>
   );
 
