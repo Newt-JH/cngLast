@@ -49,14 +49,15 @@ const YourEditorComponent = () => {
       secretAccessKey: pass,
       region: 'ap-southeast-2',  // 여기에 본인의 AWS 리전을 지정해주세요.
     });
-
+    console.log(file);
+    console.log(file.type)
     // S3에 이미지 업로드
     const params = {
       Bucket: 'cngtech',  // 여기에 본인의 S3 버킷 이름을 지정해주세요.
       Key: `images/${Date.now()}_${Math.floor(Math.random() * 1000)}.png`,
       Body: formData.get('file'),  // Blob 표현을 얻어옴
       ACL: 'public-read',
-        ContentType: file.type,
+        ContentType: String(file.type),
         ContentDisposition: 'inline',  // 이 부분을 추가합니다.
     };
 
@@ -70,64 +71,38 @@ const YourEditorComponent = () => {
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
-
     // 이미지 파일로 업로드
     setImageFile(file);
   };
     
   const handleImageChange2 = (event) => {
     const file = event.target.files[0];
-
-    // 이미지를 Base64로 인코딩
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      setImageFile2(e.target.result.split(',')[1]);  // 인코딩된 데이터에서 ',' 뒷부분만을 가져옴
-    };
-    reader.readAsDataURL(file);
+    // 이미지 파일로 업로드
+    setImageFile2(file);
   };
     
   const handleImageChange3 = (event) => {
     const file = event.target.files[0];
-
-    // 이미지를 Base64로 인코딩
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      setImageFile3(e.target.result.split(',')[1]);  // 인코딩된 데이터에서 ',' 뒷부분만을 가져옴
-    };
-    reader.readAsDataURL(file);
+    // 이미지 파일로 업로드
+    setImageFile3(file);
   };
     
   const handleImageChange4 = (event) => {
     const file = event.target.files[0];
-
-    // 이미지를 Base64로 인코딩
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      setImageFile4(e.target.result.split(',')[1]);  // 인코딩된 데이터에서 ',' 뒷부분만을 가져옴
-    };
-    reader.readAsDataURL(file);
+    // 이미지 파일로 업로드
+    setImageFile4(file);
   };
     
   const handleImageChange5 = (event) => {
     const file = event.target.files[0];
-
-    // 이미지를 Base64로 인코딩
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      setImageFile5(e.target.result.split(',')[1]);  // 인코딩된 데이터에서 ',' 뒷부분만을 가져옴
-    };
-    reader.readAsDataURL(file);
+    // 이미지 파일로 업로드
+    setImageFile5(file);
   };
     
   const handleImageChange6 = (event) => {
     const file = event.target.files[0];
-
-    // 이미지를 Base64로 인코딩
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      setImageFile6(e.target.result.split(',')[1]);  // 인코딩된 데이터에서 ',' 뒷부분만을 가져옴
-    };
-    reader.readAsDataURL(file);
+    // 이미지 파일로 업로드
+    setImageFile6(file);
   };
 
   const handlePublish = async () => {
@@ -176,8 +151,8 @@ const YourEditorComponent = () => {
             imageList: imageList
         }
         console.log(data)
-    const response = await axios.post(`https://worldwide-gabriellia-cngtech.koyeb.app/productInsert`,data);
-        // const response = await axios.post(`http://localhost:3001/productInsert`, data);
+        const response = await axios.post(`https://worldwide-gabriellia-cngtech.koyeb.app/productInsert`,data);
+         //const response = await axios.post(`http://localhost:3001/productInsert`, data);
         
     alert('제품 등록 완료');
     console.log(response);

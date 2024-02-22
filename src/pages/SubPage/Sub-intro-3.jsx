@@ -65,7 +65,7 @@ export default function SubPage3() {
                 "url(../../img/after_stroke.svg)no-repeat 0 100%/contain",
             }}
           >
-            자주묻는질문
+            자주 묻는 질문
           </h3>
           {/* <span className="float-right flex rounded-md overflow-hidden border">
             <input
@@ -84,7 +84,7 @@ export default function SubPage3() {
         >
           
           {faq.map((item, index) => (
-            <div className="rounded-t-lg border border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+            <div className="" style={{border: '1px', backgroundColor:'darkGray', borderRadius: '30px'}}>
             <h6 className="mb-0 font-['pretendard']" id="headingOne">
               <button
                 className="group relative flex w-full items-center rounded-t-[15px] border-0 bg-white py-4 px-5 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235) text-left"
@@ -94,10 +94,11 @@ export default function SubPage3() {
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-                {item.question}
-                <span className="material-icons-round ml-auto -mr-1 h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                  {item.question}
+                  {/* 밑에 화살표 */}
+                {/* <span className="material-icons-round ml-auto -mr-1 h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
                   expand_more
-                </span>
+                </span> */}
               </button>
             </h6>
             <div

@@ -2374,12 +2374,12 @@ header.on{
 @media (prefers-color-scheme: dark){
   .dark\:border-neutral-600{
     --tw-border-opacity: 1;
-    border-color: rgb(82 82 82 / var(--tw-border-opacity))
+    border-color: white
   }
 
   .dark\:bg-neutral-800{
     --tw-bg-opacity: 1;
-    background-color: rgb(38 38 38 / var(--tw-bg-opacity))
+    background-color: white
   }
 
   .dark\:fill-blue-300{

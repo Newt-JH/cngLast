@@ -32,8 +32,10 @@ export default function Header({ isMain = false }) {
           <Link to="/Sub3">문의하기</Link>
         </li>
       </ol>
-      <Link to="/Sub2_2" className="button_bg lg:flex">
-        견적 요청하기
+      <Link to="/Sub2_2" className="button_bg lg:flex" style={{ width: '80%' }}>
+        <div style={{fontSize: '80%'}}>
+          견적 요청하기
+          </div>
         <span className="material-icons-round">chevron_right</span>
       </Link>
       <button

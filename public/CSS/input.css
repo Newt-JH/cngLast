@@ -109,7 +109,7 @@ footer ol li strong{@apply min-w-[70px] mr-3;}
 .button{@apply flex justify-center items-center  w-48 h-12 gap-1.5 rounded-md text-lg font-medium  py-1 px-2 transition-all group-hover:shadow-button;}
 
 .button_bg{@apply text-white button bg-primary !w-[13rem];}
-nav .button_bg{@apply hidden lg:flex;}
+nav .button_bg{@apply hidden lg:flex; }
 
 .button_stroke{@apply border border-solid button text-primary border-primary;}
 .btn_circle{@apply w-[140px] h-[140px] flex justify-center items-center gap-1 text-sm font-medium text-center text-white bg-primary rounded-full border-solid border-[10px] border-[#BBE4D8] hover:shadow-button transition-all;}
