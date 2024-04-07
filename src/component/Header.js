@@ -32,7 +32,7 @@ export default function Header({ isMain = false }) {
           <Link to="/Sub3">문의하기</Link>
         </li>
       </ol>
-      <Link to="/Sub2_2" className="button_bg lg:flex" style={{ width: '80%' }}>
+      <Link to="/Sub2_2" className="button_bg lg:flex" style={{ width: '80%', marginLeft: '50px' }}>
         <div style={{fontSize: '80%'}}>
           견적 요청하기
           </div>
@@ -74,8 +74,11 @@ export default function Header({ isMain = false }) {
       <a
         href="/Sub2_2"
         className=" button_bg lg:flex"
+        style={{ width: '80%', marginLeft: '50px' }}
       >
-        견적 요청하기
+        <div style={{fontSize: '80%'}}>
+          견적 요청하기
+          </div>
         <span className="material-icons-round">chevron_right</span>
       </a>
       <button

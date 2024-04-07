@@ -114,7 +114,7 @@ export default function Footer() {
             <a href=""> &nbsp;개인정보처리방침</a>
           </li>
           <li>
-            <p> &emsp;&emsp;사업자등록번호 : 409-81-01513 &nbsp;&nbsp; 대표:박찬기 &nbsp;&nbsp; 통신판매업신고번호: 제2021-경기송탄-0380호</p>
+            <p> &emsp;&emsp;사업자등록번호 : 469-81-01513 &nbsp;&nbsp; 대표:박찬기 &nbsp;&nbsp; 통신판매업신고번호: 제2021-경기송탄-0380호</p>
           </li>
         </ul>
         <div className="flex justify-between pt-9 lg:flex-row flex-col gap-4">

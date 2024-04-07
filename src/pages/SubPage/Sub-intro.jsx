@@ -74,7 +74,7 @@ export default function SubPage() {
                 />
               </li>
             </ol>
-            <div className="flex flex-col justify-center gap-3 lg:py-10 lg:pb-8 lg:w-fit items-center text-center">
+            <div className="flex flex-col justify-center gap-3 lg:py-10 lg:pb-8 lg:w-fit items-center text-center" style={{marginLeft: '40px'}}>
               <h2 className="">
                 <span
                   className="w-fit"
@@ -83,7 +83,7 @@ export default function SubPage() {
                       "url(/img/after_stroke.svg)no-repeat 0 100%/contain",
                   }}
                 >
-                  Why? <i className="text-primary">㈜C&amp;G</i>
+                  Why? <i className="text-primary">C&amp;G TECH</i>
                 </span>
               </h2>
               <span className="text-lg font-medium text-paragraph">
@@ -294,7 +294,7 @@ export default function SubPage() {
             Contact
             <span className="w-[100px] h-[5px] bg-primary" />
           </p>
-          <h2 className="flex flex-col gap-4">㈜C&amp;G TECH</h2>
+          <h2 className="flex flex-col gap-4">㈜씨앤지테크</h2>
           <ol className="flex flex-col text-xl font-medium flex-grow self-stretch">
             <li className="p-4 border-b flex-grow self-stretch">
               <strong className="min-w-[200px] pr-2 inline-block">

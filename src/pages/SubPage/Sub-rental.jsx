@@ -27,7 +27,7 @@ export default function SubRental() {
                 <img
                   alt=""
                   id="Ci"
-                  src="/img/rental/1.jpg"
+                  src="/img/main/imageCNG.jpeg"
                   className="m-auto lg:mb-[50px] mb-[-50px] lg:ml-[120px] lg:px-0 px-[25px]"
                   style={{}}
                 />
@@ -96,7 +96,7 @@ export default function SubRental() {
                 <img
                   alt=""
                   id="Ci"
-                  src="/img/rental/1.jpg"
+                  src="/img/main/cngimage22.jpeg"
                   className="lg:mb-[50px] lg:mt-0 mt-[-50px] lg:ml-[-120px] lg:px-0 px-[25px]"
                   style={{}}
                 />
@@ -134,7 +134,7 @@ export default function SubRental() {
         </section> */}
         {/* 4 */}
         {/* <h2 className="">주의사항</h2> */}
-            <img src="./img/cngOrder.png" style={{width:'100%'}}/>
+            {/* <img src="./img/cngOrder.png" style={{width:'100%'}}/> */}
         <Footer />
       </div>
     </>

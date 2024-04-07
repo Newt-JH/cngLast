@@ -41,14 +41,14 @@ export default function Main() {
             <div className="flex items-center self-stretch lg:h-[915px] h-[50vh] overflow-hidden container">
               <div className="flex flex-col w-full gap-6">
                 <p className=" lg:text-7xl text-[7.8vw] font-bold text-white lg:text-left text-center">
-                ㈜C&amp;G Technology
+                ㈜ 씨앤지테크
                   <br />
                   새로운 가치의 창조
                 </p>
                 <h4 className="font-medium text-center text-white lg:text-left lg:h4 h6">
                   특화된 기술력으로 고객가치를
                   <br />
-                  실현하는 ㈜C&amp;G TECH
+                  실현하는 ㈜ 씨앤지테크
                 </h4>
               </div>
             </div>
@@ -63,14 +63,14 @@ export default function Main() {
             <div className="flex items-center self-stretch lg:h-[915px] h-[50vh] overflow-hidden container">
               <div className="flex flex-col w-full gap-6">
                 <p className=" lg:text-7xl text-[7.8vw] font-bold text-white lg:text-left text-center">
-                ㈜C&amp;G Technology
+                ㈜ 씨앤지테크
                   <br />
                   새로운 가치의 창조
                 </p>
                 <h4 className="font-medium text-center text-white lg:text-left lg:h4 h6">
                   특화된 기술력으로 고객가치를
                   <br />
-                  실현하는 ㈜C&amp;G TECH
+                  실현하는 ㈜ 씨앤지테크
                 </h4>
               </div>
             </div>
@@ -85,14 +85,14 @@ export default function Main() {
             <div className="flex items-center self-stretch lg:h-[915px] h-[50vh] overflow-hidden container">
               <div className="flex flex-col w-full gap-6">
                 <p className=" lg:text-7xl text-[7.8vw] font-bold text-white lg:text-left text-center">
-                ㈜C&amp;G Technology
+                ㈜ 씨앤지테크
                   <br />
                   새로운 가치의 창조
                 </p>
                 <h4 className="font-medium text-center text-white lg:text-left lg:h4 h6">
                   특화된 기술력으로 고객가치를
                   <br />
-                  실현하는 ㈜C&amp;G TECH
+                  실현하는 ㈜ 씨앤지테크
                 </h4>
               </div>
             </div>

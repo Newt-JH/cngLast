@@ -64,7 +64,7 @@ export default function SubPage() {
           commentThree: "아래 검색창에 제품 키워드를 입력하면",
           commentFour: "해당 상품을 확인할 수 있습니다.",
           commentFive: "EX) ○○루베, 양문형, 덮개 등",
-          img:"/img/introduce2/cg_bg_pc.png"
+          img:"/img/main/boxxxxxxx1.png"
         });
         setCategory(1);
         break;
@@ -76,7 +76,7 @@ export default function SubPage() {
           commentThree: "아래 검색창에 제품 키워드를 입력하면",
           commentFour: "해당 상품을 확인할 수 있습니다.",
           commentFive: "EX) ○○루베, 양문형, 덮개 등",
-          img:"/img/main/scrabnox.png"
+          img:"/img/main/boxxxxxxx2.png"
         });
         setCategory(2);
         break;
@@ -88,7 +88,7 @@ export default function SubPage() {
           commentThree: "아래 검색창에 제품 키워드를 입력하면",
           commentFour: "해당 상품을 확인할 수 있습니다.",
           commentFive: "EX) ○○루베, 양문형, 덮개 등",
-          img:"/img/introduce2/cg_bg_pc.png"
+          img:"/img/main/boxxxxxxx3.png"
         });
         setCategory(3);
         break;
@@ -100,7 +100,7 @@ export default function SubPage() {
           commentThree: "아래 검색창에 제품 키워드를 입력하면",
           commentFour: "해당 상품을 확인할 수 있습니다.",
           commentFive: "EX) ○○루베, 양문형, 덮개 등",
-          img:"/img/introduce2/cg_bg_pc.png"
+          img:"/img/main/boxxxxxxx4.png"
         });
         setCategory(4);
         break;
@@ -151,8 +151,8 @@ export default function SubPage() {
     <li key={index} className="flex flex-col overflow-hidden bg-white self-stretch flex-grow">
       <Link to={`/Sub2_1?productID=${product.productID}`}>
         <div style={{ display: 'flex', width: '100%', height: '80vh', flexDirection: 'column', justifyContent: 'space-between' }}>
-          <div>
-            <img alt="" src={product.titleImage} style={{ width: '100%' }} />
+          <div style={{height: '80%'}}>
+            <img alt="" src={product.titleImage} style={{ height: '100%' }} />
           </div>
           <div className="flex flex-col items-end self-stretch overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
             <h4 className="text-[32px] font-medium w-full">

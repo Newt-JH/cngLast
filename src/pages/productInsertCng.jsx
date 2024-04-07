@@ -1,5 +1,8 @@
+/* eslint-disable no-undef */
 import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import 'react-quill/dist/quill.snow.css';
 import AWS from 'aws-sdk';
 import axios from "axios";
@@ -24,6 +27,8 @@ const YourEditorComponent = () => {
         description: '',
         steelPlate: '',
     });
+  const [editorImage, setEditorImage] = useState(null);
+  const [editorImageLink, setEditorImageLink] = useState(null);
     
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -64,10 +69,18 @@ const YourEditorComponent = () => {
     const uploadResult = await s3.upload(params).promise();
     return uploadResult.Location;
   };
+// 리액트 퀼
+  // const handleEditorChange = (value) => {
+  //   setContent(value);
+  // };
 
-  const handleEditorChange = (value) => {
-    setContent(value);
+    // 에디터의 내용이 변경될 때 호출되는 콜백 함수
+    const handleEditorChange = (event, editor) => {
+      const data = editor.getData();
+      const decodedData = data.replace(/&lt;/g, '<').replace(/&gt;/g, '>'); // HTML 엔티티를 문자로 변환
+      setContent(decodedData);
   };
+
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
@@ -104,7 +117,14 @@ const YourEditorComponent = () => {
     // 이미지 파일로 업로드
     setImageFile6(file);
   };
-
+  const handleImageChangeForEditor = async (event) => {
+    const file = event.target.files[0];
+    // 이미지 파일로 업로드
+    setEditorImage(file);
+    const imgLink = await handleImageUpload(file);
+    setEditorImageLink(imgLink);
+  };
+  
   const handlePublish = async () => {
     // 이미지 업로드
     const imageUrl = imageFile ? await handleImageUpload(imageFile) : null;
@@ -160,7 +180,21 @@ const YourEditorComponent = () => {
     console.error('Error fetching data:', error);
     alert('제품 등록 중 오류 발생');
   }
-};
+  };
+
+  const editorConfig = {
+    toolbar: [
+      'heading', '|', // 제목
+      'bold', 'italic', 'underline', 'strikethrough', '|', // 글자 스타일
+      'alignment', '|', // 정렬
+      'numberedList', 'bulletedList', '|', // 리스트
+      'indent', 'outdent', '|', // 들여쓰기
+      'link', 'blockQuote', '|', // 링크, 인용구
+      'imageUpload', '|', // 이미지 업로드
+      'insertTable', '|', // 테이블 삽입
+      'undo', 'redo' // 되돌리기, 다시 실행
+    ],
+  };
 
   return (
     <div>
@@ -260,15 +294,68 @@ const YourEditorComponent = () => {
               value={formData.steelPlate}
               onChange={handleInputChange}
             />
-          </div>
-        
-          
-      <ReactQuill
+      </div>
+      에디터 이미지 업로드 <input type="file" onChange={handleImageChangeForEditor} /> <br />
+      <br />
+      {editorImageLink !== null && (
+  `<img src="${editorImageLink}" alt="Uploaded Image" />`
+)}
+          <CKEditor
+            editor={ClassicEditor}
+            data={content}
+        onChange={handleEditorChange}
+        config={editorConfig}
+      />
+      
+      <br /><br /><br />
+      
+      <div>{content}</div>
+      {/* <ReactQuill
         value={content}
         onChange={handleEditorChange}
         modules={{ toolbar: [['bold', 'italic', 'underline', 'strike'], ['list', 'bullet'], ['link', 'image'], ['clean']] }}
         formats={['bold', 'italic', 'underline', 'strike', 'list', 'bullet', 'link', 'image']}
-      />
+      /> */}
+          {/* <ReactQuill
+                value={content}
+                onChange={handleEditorChange}
+                modules={{
+                    toolbar: {
+                        container: [
+                            [{ 'header': '1'}, {'header': '2'}, { 'font': [] }],
+                            [{size: []}],
+                            ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+                            [{'list': 'ordered'}, {'list': 'bullet'},
+                             {'indent': '-1'}, {'indent': '+1'}],
+                            ['link', 'image', 'video'],
+                            ['clean']
+                        ],
+                        handlers: {
+                          image: () => {
+                            let image = '';
+                                const input = document.createElement('input');
+                                input.setAttribute('type', 'file');
+                                input.setAttribute('accept', 'image/*');
+                                input.click();
+
+                                input.onchange = async () => {
+                                  const file = input.files[0];
+                                  try {
+                                    image = await handleImageUpload(file);
+                                    const editor = quillRef.current.getEditor();
+                                    const range = editor.getSelection();
+                                    editor.insertEmbed(range.index, "image", image); 
+                                  } catch (err) {
+                                    console.log(err);
+                                  }
+                                };
+                            }
+                        }
+                    }
+                }}
+            /> */}
+<div>
+        </div>
       <button onClick={async() => {
         await handlePublish()
         // await fetchData();
