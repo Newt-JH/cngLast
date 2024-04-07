@@ -41,14 +41,14 @@ export default function Main() {
             <div className="flex items-center self-stretch lg:h-[915px] h-[50vh] overflow-hidden container">
               <div className="flex flex-col w-full gap-6">
                 <p className=" lg:text-7xl text-[7.8vw] font-bold text-white lg:text-left text-center">
-                ㈜ 씨앤지테크
+                ㈜C&amp;G Technology
                   <br />
-                  새로운 가치의 창조
+                  새로운 가치 실현!
                 </p>
                 <h4 className="font-medium text-center text-white lg:text-left lg:h4 h6">
-                  특화된 기술력으로 고객가치를
+                C&G Technology는 기존에 없던 새로운 시각과 접근으로
                   <br />
-                  실현하는 ㈜ 씨앤지테크
+                  암롤박스 제작 기술력과 전문성으로 이루어지는 창의적인 솔루션을 제공합니다.
                 </h4>
               </div>
             </div>
@@ -63,14 +63,14 @@ export default function Main() {
             <div className="flex items-center self-stretch lg:h-[915px] h-[50vh] overflow-hidden container">
               <div className="flex flex-col w-full gap-6">
                 <p className=" lg:text-7xl text-[7.8vw] font-bold text-white lg:text-left text-center">
-                ㈜ 씨앤지테크
+                ㈜C&amp;G Technology
                   <br />
-                  새로운 가치의 창조
+                  고객 만족을 위한 혁신!
                 </p>
                 <h4 className="font-medium text-center text-white lg:text-left lg:h4 h6">
-                  특화된 기술력으로 고객가치를
+                C&G TECH의 탁월한 제품 품질과 서비스로
                   <br />
-                  실현하는 ㈜ 씨앤지테크
+                  고객의 경험을 새롭게 변화시키고 있습니다.
                 </h4>
               </div>
             </div>
@@ -85,14 +85,14 @@ export default function Main() {
             <div className="flex items-center self-stretch lg:h-[915px] h-[50vh] overflow-hidden container">
               <div className="flex flex-col w-full gap-6">
                 <p className=" lg:text-7xl text-[7.8vw] font-bold text-white lg:text-left text-center">
-                ㈜ 씨앤지테크
+                ㈜C&amp;G Technology
                   <br />
-                  새로운 가치의 창조
+                  고객의 성공을 위한 파트너!
                 </p>
                 <h4 className="font-medium text-center text-white lg:text-left lg:h4 h6">
-                  특화된 기술력으로 고객가치를
+                C&G TECH는 고객과의 소통을 통해 협력적인 파트너로서
                   <br />
-                  실현하는 ㈜ 씨앤지테크
+                  주문제작 형식으로 제품 제공을 하여 고객과 함께 가치를 창출합니다.
                 </h4>
               </div>
             </div>
@@ -307,7 +307,7 @@ export default function Main() {
             <div className="container relative flex self-stretch justify-end gap-20">
               <img
                 alt=""
-                src="/img/main/product2.png"
+                src="/img/main/asdasd-removebg-preview.png"
                 className="lg:absolute top-0 right-[calc(50%+80px)] lg:block hidden"
               />
               <div className="flex flex-col lg:flex-row  flex-grow gap-[30px] lg:col-6">
