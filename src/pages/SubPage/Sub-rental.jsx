@@ -27,7 +27,7 @@ export default function SubRental() {
                 <img
                   alt=""
                   id="Ci"
-                  src="/img/main/imageCNG.jpeg"
+                  src="https://cngtech.s3.ap-southeast-2.amazonaws.com/images/imageCNG.jpeg"
                   className="m-auto lg:mb-[50px] mb-[-50px] lg:ml-[120px] lg:px-0 px-[25px]"
                   style={{}}
                 />
@@ -96,7 +96,7 @@ export default function SubRental() {
                 <img
                   alt=""
                   id="Ci"
-                  src="/img/main/cngimage22.jpeg"
+                  src="https://cngtech.s3.ap-southeast-2.amazonaws.com/images/cngimage22.jpeg"
                   className="lg:mb-[50px] lg:mt-0 mt-[-50px] lg:ml-[-120px] lg:px-0 px-[25px]"
                   style={{}}
                 />
