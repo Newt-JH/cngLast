@@ -7,6 +7,7 @@ import axios from "axios";
 
 export default function SubPage() {
   const [openSelectBox, setOpenSelectBox] = useState(false);
+  const [searchItem, setSearchItem] = useState("");
   const [select, setSelect] = useState("tab1");
   const [category, setCategory] = useState(1);
   const [tabComment, setTabComment] = useState({
@@ -28,7 +29,7 @@ export default function SubPage() {
   },
   {
     productID: '2',
-    title: '25루베 뭐시기 상품 2번',
+    name: '25루베 뭐시기 상품 2번',
     hashtag: '건설폐기물 양문형',
     createDateTime: '2023.06.16',
     imageLink: '/img/introduce2/cg_bg_pc.png'
@@ -50,7 +51,18 @@ export default function SubPage() {
   
     useEffect(() => {
       fetchData();
-    },[category])
+    }, [category])
+
+  const searchProducts = () => {
+    if (searchItem.trim() === "") {
+      fetchData();
+    } else {
+      const searchedProducts = productList.filter((data) => 
+      (data.name && data.name.includes(searchItem)) 
+    );
+      setProductList(searchedProducts);
+    }
+  };
   
   const handleSelect = (tab) => {
     setSelect(tab);
@@ -134,18 +146,23 @@ export default function SubPage() {
         <img alt="" src={ tabComment.img } className="" width='50%' />
       </div>
       <div className="container pt-9">
-        {/* <div className="mb-9 w-full after:content-[''] after:block after:clear-both h-12">
+        <div className="mb-9 w-full after:content-[''] after:block after:clear-both h-12">
           <span className="float-right flex rounded-md overflow-hidden border">
             <input
               className="outline-none p-3 w-[250px]"
               type="text"
               placeholder="찾으시는 상품을 입력해 주세요."
+              value={searchItem}
+              onChange={(e) => setSearchItem(e.target.value)}
             />
-            <button className="material-icons-round bg-primary2 text-white p-3">
+            <button 
+              className="material-icons-round bg-primary2 text-white p-3"
+              onClick={searchProducts} 
+            >
               search
             </button>
           </span>
-        </div> */}
+        </div>
         <ol className="grid grid-cols-2 gap-9">
   {productList.map((product, index) => (
     <li key={index} className="flex flex-col overflow-hidden bg-white self-stretch flex-grow">

@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useScrollPosition from "../hooks/useScrollPosition";
 
 export default function Header({ isMain = false }) {
   const [openHamMenu, setOpenHamMemu] = useState(false);
   const [scrollPosition] = useScrollPosition();
+  const navigate = useNavigate(); // useNavigate 훅 사용
+
+  const clickLog = () => {
+    navigate("/"); // 메인 페이지로 이동
+    window.location.reload();
+  };
 
   const getMainHeader = () => (
     <nav className="lg:container flex items-center justify-between w-full h-full">
-      <Link to="/" className="logo lg:px-[50px] h-[60px] px-4">
+      <Link className="logo lg:px-[50px] h-[60px] px-4" onClick={clickLog}>
         <img
           src="/img/logo_d_e.svg"
           className="hidden h-full lg:block logo_d_e"
@@ -35,7 +41,7 @@ export default function Header({ isMain = false }) {
       <Link to="/Sub2_2" className="button_bg lg:flex" style={{ width: '80%', marginLeft: '50px' }}>
         <div style={{fontSize: '80%'}}>
           견적 요청하기
-          </div>
+        </div>
         <span className="material-icons-round">chevron_right</span>
       </Link>
       <button
@@ -49,8 +55,7 @@ export default function Header({ isMain = false }) {
 
   const getSubHeader = () => (
     <nav className="lg:container flex items-center justify-between w-full h-full">
-      <Link to="/" className="logo lg:px-[50px] h-[60px] px-4">
-        {/* <img alt="" src="../../../img/logo_d_e.svg" class="hidden h-full lg:block logo_d_e"> */}
+      <Link to="/" className="logo lg:px-[50px] h-[60px] px-4" onClick={clickLog}>
         <img alt="" src="/img/logo_l_e.svg" className="block h-full logo_l_e" />
       </Link>
       <ol
@@ -78,7 +83,7 @@ export default function Header({ isMain = false }) {
       >
         <div style={{fontSize: '80%'}}>
           견적 요청하기
-          </div>
+        </div>
         <span className="material-icons-round">chevron_right</span>
       </a>
       <button

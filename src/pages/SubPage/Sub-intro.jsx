@@ -294,7 +294,7 @@ export default function SubPage() {
             Contact
             <span className="w-[100px] h-[5px] bg-primary" />
           </p>
-          <h2 className="flex flex-col gap-4">㈜씨앤지테크</h2>
+          <h2 className="flex flex-col gap-4">씨앤지테크</h2>
           <ol className="flex flex-col text-xl font-medium flex-grow self-stretch">
             <li className="p-4 border-b flex-grow self-stretch">
               <strong className="min-w-[200px] pr-2 inline-block">

@@ -26,6 +26,7 @@ export default function Main() {
   useEffect(() => {
     fetchData();
   },[])
+
   return (
     <>
       <TopButton />
@@ -41,7 +42,7 @@ export default function Main() {
             <div className="flex items-center self-stretch lg:h-[915px] h-[50vh] overflow-hidden container">
               <div className="flex flex-col w-full gap-6">
                 <p className=" lg:text-7xl text-[7.8vw] font-bold text-white lg:text-left text-center">
-                ㈜C&amp;G Technology
+                {/* ㈜C&amp;G Technology */}
                   <br />
                   새로운 가치 실현!
                 </p>
@@ -63,7 +64,7 @@ export default function Main() {
             <div className="flex items-center self-stretch lg:h-[915px] h-[50vh] overflow-hidden container">
               <div className="flex flex-col w-full gap-6">
                 <p className=" lg:text-7xl text-[7.8vw] font-bold text-white lg:text-left text-center">
-                ㈜C&amp;G Technology
+                {/* ㈜C&amp;G Technology */}
                   <br />
                   고객 만족을 위한 혁신!
                 </p>
@@ -85,7 +86,7 @@ export default function Main() {
             <div className="flex items-center self-stretch lg:h-[915px] h-[50vh] overflow-hidden container">
               <div className="flex flex-col w-full gap-6">
                 <p className=" lg:text-7xl text-[7.8vw] font-bold text-white lg:text-left text-center">
-                ㈜C&amp;G Technology
+                {/* ㈜C&amp;G Technology */}
                   <br />
                   고객의 성공을 위한 파트너!
                 </p>
@@ -110,13 +111,14 @@ export default function Main() {
               <p className="sm:text-[40px] text-[24px] font-bold text-center gradient1 text_clip">
                 특화된 기술력으로 고객가치를
                 <br />
-                실현하는 ㈜C&amp;G TECH
+                {/* 실현하는 ㈜C&amp;G TECH */}
+                실현하는 씨앤지테크 
               </p>
               <img alt="" src="/img/main/smile.png" />
               <p className="font-medium text-center lg:text-xl ">
-                암롤박스의 특화된 기술력으로 깨끗하고 쾌적한 환경을 만들기 위해
-                <br /> 그 어떤 종류의 폐기물도 처리가능한 ㈜C&amp;G TEC 만의 제작
-                기술력을 제공합니다.
+                암롤박스의 특화된 기술력으로 다양한 종류의 폐기물을 처리할 수 있으며, 
+                <br />환경을 생각하는 기업으로서 깨끗하고 쾌적한 환경을 만들기 위해 노력합니다. 
+                <br />우리는 폐기물 처리 분야에서의 리더로서 지속 가능한 발전을 위한 혁신적인 솔루션을 제공합니다.
               </p>
             </div>
           </div>

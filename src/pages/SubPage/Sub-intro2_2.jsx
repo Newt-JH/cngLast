@@ -232,11 +232,11 @@ export default function SubPage22() {
         </div>
         <ol className="flex gap-9 flex-col lg:flex-row">
           <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]" onClick={() => {handleSelectTab3('tab1')} }>
-            <img alt="" src="/img/introduce2/product.png" />
+            <img alt="" src="/img/introduce2/box2.png" />
             <h5 className="pt-[30px] font-medium w-full">암롤박스</h5>
           </li>
           <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]" onClick={() => {handleSelectTab3('tab2')} }>
-            <img alt="" src="/img/introduce2/product.png" />
+            <img alt="" src="/img/introduce2/Scrab_box.png" />
             <h5 className="pt-[30px] font-medium w-full">고철박스 / 스크랩박스 / 방통</h5>
           </li>
           {/* <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]">

@@ -20,7 +20,7 @@ export default function Footer() {
             <ol className="flex flex-col gap-4 text-xl font-medium pt-6 text-text2">
               <li className="flex lg:flex-col gap-2">
                 <strong className="min-w-[100px] inline-block">신한은행</strong>
-                <br />140-012-671367 <br />㈜씨앤지테크 박찬기
+                <br />140-012-671367 <br />씨앤지테크 박찬기
                   </li>
 
             </ol>
@@ -118,7 +118,7 @@ export default function Footer() {
           </li>
         </ul>
         <div className="flex justify-between pt-9 lg:flex-row flex-col gap-4">
-          <p>Copyright © 2022 ㈜C&amp;G tech. All Rights Reserved.</p>
+          <p>Copyright © 2022 C&amp;G tech. All Rights Reserved.</p>
           <ul className="flex gap-4">
             <li>
               <a href="https://instagram.com/cgt0706?igshid=NTc4MTIwNjQ2YQ==">

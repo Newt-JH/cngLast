@@ -38,7 +38,8 @@ export default function SubRental() {
               >
                 <h3 className="pb-[4.2vw]">
                   <span className="w-fit" style={{}}>
-                  ㈜C&amp;G테크 암롤박스 무료 렌탈 서비스
+                  {/* ㈜C&amp;G TECH 암롤박스 무료 렌탈 서비스 */}
+                  C&amp;G TECH 암롤박스 무료 렌탈 서비스
                   </span>
                 </h3>
                 <h4 className=" font-medium">
@@ -75,7 +76,8 @@ export default function SubRental() {
               >
                 <h3 className="pb-[4.2vw]">
                   <span className="w-fit" style={{}}>
-                  ㈜C&amp;G테크 암롤박스 유료 렌탈 서비스
+                  {/* ㈜C&amp;G TECH 암롤박스 유료 렌탈 서비스 */}
+                  C&amp;G TECH 암롤박스 유료 렌탈 서비스
                   </span>
                 </h3>
                 <h4 className=" font-medium">
