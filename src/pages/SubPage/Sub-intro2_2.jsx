@@ -231,18 +231,14 @@ export default function SubPage22() {
           </p>
         </div>
         <ol className="flex gap-9 flex-col lg:flex-row">
-          <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]" onClick={() => {handleSelectTab3('tab1')} }>
-            <img alt="" src="/img/introduce2/box2.png" />
-            <h5 className="pt-[30px] font-medium w-full">암롤박스</h5>
+          <li className={`flex flex-col overflow-hidden lg:w-[calc(40%-18px)]`} style={{ background: productContact.productType === '암롤박스' ? '#00CD85' : 'transparent', padding: '10px', borderRadius: '10px' } } onClick={() => {handleSelectTab3('tab1')} }>
+            <img alt="" src="/img/introduce2/box2.png" style={{margin: '10px'}} />
+            <h5 className="pt-[30px] font-medium w-full" style={{margin: '10px', color: productContact.productType === '암롤박스' ? 'white' : 'black'}}>암롤박스</h5>
           </li>
-          <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]" onClick={() => {handleSelectTab3('tab2')} }>
-            <img alt="" src="/img/introduce2/Scrab_box.png" />
-            <h5 className="pt-[30px] font-medium w-full">고철박스 / 스크랩박스 / 방통</h5>
+          <li className={`flex flex-col overflow-hidden lg:w-[calc(40%-18px)]`} style={{ background: productContact.productType === '고철박스 / 스크랩박스 / 방통' ? '#00CD85' : 'transparent', padding: '10px', borderRadius: '10px' } } onClick={() => {handleSelectTab3('tab2')} }>
+            <img alt="" src="/img/introduce2/Scrab_box.png" style={{margin: '10px'}}/>
+            <h5 className="pt-[30px] font-medium w-full" style={{margin: '10px', color: productContact.productType === '고철박스 / 스크랩박스 / 방통' ? 'white' : 'black'}}>고철박스 / 스크랩박스 / 방통</h5>
           </li>
-          {/* <li className="flex flex-col  overflow-hidden bg-white lg:w-[calc(33.33%-18px)]">
-            <img alt="" src="/img/introduce2/product.png" />
-            <h5 className="pt-[30px] font-medium w-full">수리</h5>
-          </li> */}
         </ol>
       </div>
       {/* 2 */}
@@ -330,7 +326,7 @@ export default function SubPage22() {
               type="text"
               id="InquiryCompany"
               name="InquiryCompany"
-              placeholder="전화번호(’-’ 제외)을 입력하세요."
+              placeholder="전화번호('-' 제외)을 입력하세요."
               className="h-full w-full p-4 outline-none"
               value={productContact.phone}
               onChange={handleContentChangePhone}
@@ -355,13 +351,13 @@ export default function SubPage22() {
               제1조(목적)
               <br />
               <br />
-              ㈜씨앤지테크(이하 ‘회사'라고 함)는 회사가 제공하고자 하는
-              서비스(이하 ‘회사 서비스’)를 이용하는 개인(이하 ‘이용자’ 또는
-              ‘개인’)의 정보(이하 ‘개인정보’)를 보호하기 위해, 개인정보보호법,
+              ㈜씨앤지테크(이하 '회사'라고 함)는 회사가 제공하고자 하는
+              서비스(이하 '회사 서비스')를 이용하는 개인(이하 '이용자' 또는
+              '개인')의 정보(이하 '개인정보')를 보호하기 위해, 개인정보보호법,
               정보통신망 이용촉진 및 정보보호 등에 관한 법률(이하
               '정보통신망법') 등 관련 법령을 준수하고, 서비스 이용자의 개인정보
               보호 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여
-              다음과 같이 개인정보처리방침(이하 ‘본 방침’)을 수립합니다.
+              다음과 같이 개인정보처리방침(이하 '본 방침')을 수립합니다.
               <br />
               <br />
               제2조(개인정보 처리의 원칙)
@@ -502,7 +498,7 @@ export default function SubPage22() {
               회사가 재화 등의 거래관계를 통하여 수신자로부터 직접 연락처를
               수집한 경우, 거래가 종료된 날로부터 6개월 이내에 회사가 처리하고
               수신자와 거래한 것과 동종의 재화 등에 대한 영리목적의 광고성
-              정보를 전송하려는 경우 2. 「방문판매 등에 관한 법률」에 따른
+              정보를 전송하려는 경우 2. "방문판매 등에 관한 법률"에 따른
               전화권유판매자가 육성으로 수신자에게 개인정보의 수집출처를
               고지하고 전화권유를 하는 경우 ② 회사는 전항에도 불구하고 수신자가
               수신거부의사를 표시하거나 사전 동의를 철회한 경우에는 영리목적의

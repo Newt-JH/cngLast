@@ -73,16 +73,6 @@ export default function SubPage3() {
           >
             자주 묻는 질문
           </h3>
-          {/* <span className="float-right flex rounded-md overflow-hidden border">
-            <input
-              className="outline-none p-3 w-[250px]"
-              type="text"
-              placeholder="검색어를 입력해 주세요."
-            />
-            <button className="material-icons-round bg-primary2 text-white p-3 focus:ring-0">
-              search
-            </button>
-          </span> */}
         </div>
         <div
           id="accordionExample"
@@ -90,36 +80,33 @@ export default function SubPage3() {
         >
           
           {faq.map((item, index) => (
-            <div className="" style={{border: '1px', backgroundColor:'darkGray', borderRadius: '30px'}}>
-            <h6 className="mb-0 font-['pretendard']" id="headingOne">
-              <button
-                className="group relative flex w-full items-center rounded-t-[15px] border-0 bg-white py-4 px-5 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235) text-left"
-                type="button"
-                data-te-collapse-init=""
-                data-te-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
+            <div className="" style={{ backgroundColor: 'lightgray', borderRadius: '30px' }}>
+              <h6 className="mb-0 font-['pretendard']" id="headingOne">
+                <button
+                  className="group relative flex w-full items-center rounded-t-[15px] border-0 bg-white py-4 px-5 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235) text-left"
+                  type="button"
+                  data-te-collapse-init=""
+                  data-te-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                  style={{ border: '1px solid lightgray' }}
+                >
                   {item.question}
-                  {/* 밑에 화살표 */}
-                {/* <span className="material-icons-round ml-auto -mr-1 h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
-                  expand_more
-                </span> */}
-              </button>
-            </h6>
-            <div
-              id="collapseOne"
-              className="!visible"
-              data-te-collapse-item=""
-              data-te-collapse-show=""
-              aria-labelledby="headingOne"
-              data-te-parent="#accordionExample"
-            >
-              <div className="py-4 px-5" style={{ width: '60%'}}>
-                <strong> {item.answer} </strong>
+                </button>
+              </h6>
+              <div
+                id="collapseOne"
+                className="!visible"
+                data-te-collapse-item=""
+                data-te-collapse-show=""
+                aria-labelledby="headingOne"
+                data-te-parent="#accordionExample"
+              >
+                <div className="py-4 px-5" style={{ width: '60%' }}>
+                  <strong> {item.answer} </strong>
+                </div>
               </div>
             </div>
-          </div>
           ))}
           
           {/* 아코디언 3 */}

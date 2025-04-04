@@ -39,7 +39,7 @@ export default function SubPage() {
       try {
         const response = await axios.get(`https://worldwide-gabriellia-cngtech.koyeb.app/category?category=${category}`);
         console.log(response);
-        setProductList(response.data);
+        setProductList(response.data.reverse());
       } catch (error) {
         console.error('Error fetching data:', error);
       }

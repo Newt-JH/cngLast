@@ -47,7 +47,7 @@ export default function Main() {
                   새로운 가치 실현!
                 </p>
                 <h4 className="font-medium text-center text-white lg:text-left lg:h4 h6">
-                C&G Technology는 기존에 없던 새로운 시각과 접근으로
+                씨앤지테크는 기존에 없던 새로운 시각과 접근으로
                   <br />
                   암롤박스 제작 기술력과 전문성으로 이루어지는 창의적인 솔루션을 제공합니다.
                 </h4>
