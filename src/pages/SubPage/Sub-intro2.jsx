@@ -180,7 +180,7 @@ export default function SubPage() {
                 # {product.hashTag}
               </i>
               <p className="text-sm font-medium text-paragraph">
-                {product.createDateTime.slice(0, 10)}
+                {product.createDateTime ? product.createDateTime.slice(0, 10) : '2025.01.01'}
               </p>
             </div>
           </div>
