@@ -70,25 +70,11 @@ export default function SubPage21() {
         <div className="flex flex-col  flex-grow pb-[30px] col-6">
           <div className="flex  self-stretch  overflow-hidden pb-[30px] swiper mySwiper2 w-full">
             <ul className=" swiper-wrapper ">
-              <li className="relative overflow-hidden bg-black/50 swiper-slide group transition-all">
-                <img alt="" src={ product.titleImage } className="h-full" />
-                <a className="absolute left-[212px] top-[270px] gap-3 px-[30px] py-4 rounded-md border border-white group-hover:flex hidden text-[22px] font-bold  text-white transition">
-                  More View
-                  <i className=" text-lg text-center text-white material-icons-round">
-                    chevron_right
-                  </i>
-                </a>
+              <li className="relative flex items-center justify-center overflow-hidden swiper-slide group transition-all border border-lime-500">
+                <img alt="" src={ product.titleImage } className="object-contain max-h-full max-w-full" />
               </li>
-              <li className="relative overflow-hidden bg-black/50 swiper-slide ">
+              <li className="relative overflow-hidden swiper-slide ">
                 <div className=" w-[592px] h-[293px]" />
-                <a className="flex  items-center  absolute left-[212px] top-[270px] gap-3 px-[30px] py-4 rounded-md border border-white">
-                  <p className=" text-[22px] font-bold  text-white">
-                    More View
-                  </p>
-                  <i className=" text-lg text-center text-white material-icons-round">
-                    chevron_right
-                  </i>
-                </a>
               </li>
               <li className="flex flex-col  flex-grow relative overflow-hidden gap-2.5 px-1 py-[154px] bg-black/50 swiper-slide">
                 <div className=" w-[592px] h-[293px]" />
@@ -334,7 +320,7 @@ export default function SubPage21() {
                 <div className="flex  items-center  relative gap-[31px]">
                   <img alt="" className="" src="/img/introduce2/icon1.png" />
                   <p className=" text-center">
-                    사진의 이미지는
+                    사진의 이미지는&nbsp;
                     <span className="  text-[#ef2b2a]">
                       실제 측정된 사이즈 및 구성과{" "}
                     </span>
@@ -342,7 +328,7 @@ export default function SubPage21() {
                   </p>
                 </div>
               </div>
-              <div dangerouslySetInnerHTML={{ __html: product.contents }}></div>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }} dangerouslySetInnerHTML={{ __html: product.contents }}></div>
             </div>
           </div>
           <div className="flex flex-col p-4 col-3 product_bar top-[10vh] right-0 bg-white z-10 transition-all ">

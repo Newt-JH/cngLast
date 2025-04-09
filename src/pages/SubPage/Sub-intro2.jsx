@@ -20,20 +20,7 @@ export default function SubPage() {
     img:"/img/introduce2/cg_bg_pc.png"
   });
 
-  const [productList, setProductList] = useState([{
-    productID: '1',
-    name: '25루베 뭐시기 상품',
-    hashtag: '건설폐기물 양문형',
-    createDateTime: '2023.06.11',
-    titleImage: '/img/introduce2/cg_bg_pc.png'
-  },
-  {
-    productID: '2',
-    name: '25루베 뭐시기 상품 2번',
-    hashtag: '건설폐기물 양문형',
-    createDateTime: '2023.06.16',
-    imageLink: '/img/introduce2/cg_bg_pc.png'
-    }]);
+  const [productList, setProductList] = useState([]);
   
     const fetchData = async () => {
       try {
@@ -165,11 +152,23 @@ export default function SubPage() {
         </div>
         <ol className="grid grid-cols-2 gap-9">
   {productList.map((product, index) => (
-    <li key={index} className="flex flex-col overflow-hidden bg-white self-stretch flex-grow">
+    <li key={index} className="flex flex-col overflow-hidden bg-white self-stretch flex-grow" style={{ overflow: 'hidden' }}>
       <Link to={`/Sub2_1?productID=${product.productID}`}>
-        <div style={{ display: 'flex', width: '100%', height: '80vh', flexDirection: 'column', justifyContent: 'space-between' }}>
-          <div style={{height: '80%'}}>
-            <img alt="" src={product.titleImage} style={{ height: '100%' }} />
+        <div style={{ display: 'flex', width: '100%', height: '80vh', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
+          <div style={{ height: '80%', width: '100%', position: 'relative', backgroundColor: 'white' }}>
+            <img 
+              alt="" 
+              src={product.titleImage} 
+              style={{ 
+                height: '100%', 
+                width: '100%', 
+                objectFit: 'contain',
+                position: 'absolute', 
+                top: '50%', 
+                left: '50%', 
+                transform: 'translate(-50%, -50%)' 
+              }} 
+            />
           </div>
           <div className="flex flex-col items-end self-stretch overflow-hidden gap-[18px] lg:px-[25px] lg:pt-[30px] pt-4 lg:pb-10 bg-[#fcfefe] border-t border-[#c7d9d2]">
             <h4 className="text-[32px] font-medium w-full">
