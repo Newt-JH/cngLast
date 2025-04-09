@@ -66,7 +66,7 @@ export default function SubPage21() {
       <TopButton />
       <Header />
       <div className="hidden menu_close" />
-      <div className="flex  max-w-[1300px] gap-[50px] container pt-12 mt-20 product">
+      <div className="flex  max-w-[1300px] gap-[50px] container pt-12 mt-20 product" style={{ width: '100%' }}>
         <div className="flex flex-col  flex-grow pb-[30px] col-6">
           <div className="flex  self-stretch  overflow-hidden pb-[30px] swiper mySwiper2 w-full">
             <ul className=" swiper-wrapper ">
@@ -312,11 +312,7 @@ export default function SubPage21() {
         </div>
       </div>
       {/* 1 */}
-      <section className="pb-[140px] mt-[100px] flex flex-col  items-center  max-w-[1300px] container">
-        <div className="flex self-stretch ">
-          <div className="flex flex-col  flex-grow pt-10 border-r  border-[#a9abaa]">
-            <div className="flex flex-col justify-center items-center self-stretch  gap-8 px-8">
-              <div className="flex justify-center items-center self-stretch  px-4 py-6 bg-[#fff5f5] border border-[#ffbfbf]">
+      <div className="flex justify-center items-center self-stretch  px-4 py-6 bg-[#fff5f5] border border-[#ffbfbf]" style={{width: '111%', marginTop: '30px', marginBottom:'30px' }}>
                 <div className="flex  items-center  relative gap-[31px]">
                   <img alt="" className="" src="/img/introduce2/icon1.png" />
                   <p className=" text-center">
@@ -328,11 +324,7 @@ export default function SubPage21() {
                   </p>
                 </div>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }} dangerouslySetInnerHTML={{ __html: product.contents }}></div>
-            </div>
-          </div>
-        </div>
-      </section>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '111%' }} dangerouslySetInnerHTML={{ __html: product.contents }}></div>
       {/* 2 */}
       <Footer />
     </>
