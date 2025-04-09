@@ -154,8 +154,8 @@ export default function SubPage() {
   {productList.map((product, index) => (
     <li key={index} className="flex flex-col overflow-hidden bg-white self-stretch flex-grow" style={{ overflow: 'hidden' }}>
       <Link to={`/Sub2_1?productID=${product.productID}`}>
-        <div style={{ display: 'flex', width: '100%', height: '80vh', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
-          <div style={{ height: '80%', width: '100%', position: 'relative', backgroundColor: 'white' }}>
+        <div style={{ display: 'flex', width: '100%', height: '700px', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
+          <div style={{ height: '60%', width: '100%', position: 'relative', backgroundColor: 'white' }}>
             <img 
               alt="" 
               src={product.titleImage} 

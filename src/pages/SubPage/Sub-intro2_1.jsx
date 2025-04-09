@@ -331,46 +331,6 @@ export default function SubPage21() {
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }} dangerouslySetInnerHTML={{ __html: product.contents }}></div>
             </div>
           </div>
-          <div className="flex flex-col p-4 col-3 product_bar top-[10vh] right-0 bg-white z-10 transition-all ">
-            <div className="flex flex-col self-stretch relative gap-3 py-10">
-              <p className=" text-base font-bold  text-[#1e2732]">기본설명</p>
-              <div
-                className={`dropdown-toggle ${openDetailSelect2 ? "on" : ""}`}
-              >
-                <a
-                  className={`flex w-full overflow-hidden gap-2.5 px-[15px] py-3 bg-white dropdown-toggle flex items-center self-stretch relative px-[15px] rounded-[3px] border border-[#d6d7d8] ${
-                    openDetailSelect2 ? "on" : ""
-                  }`}
-                  onClick={() => setOpenDetailSelect2(!openDetailSelect2)}
-                >
-                  <div className=" w-[490px] h-[22px] relative overflow-hidden">
-                    <p className="absolute left-0 top-0 text-base  text-[#233549]">
-                      자세히보기
-                    </p>
-                  </div>
-                  <i className="w-5 h-5 material-icons-round !leading-none text-xl text-center text-[#5e635f]">
-                    expand_more
-                  </i>
-                </a>
-                <ul
-                  className="p-4 border-[#d6d7d8] border dropdown hidden w-full -mt-px"
-                  style={{ display: openDetailSelect2 ? "block" : "none" }}
-                >
-                  <li>
-                    <p>{product.description} </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="flex  pt-[66px] border-t border-[#f4f4f4]">
-              <a
-                href="#!"
-                className=" w-[270px] h-[62px] hover:shadow-default-button rounded-sm bg-primary text-2xl font-bold text-center text-white p-4"
-              >
-                견적문의
-              </a>
-            </div>
-          </div>
         </div>
       </section>
       {/* 2 */}
