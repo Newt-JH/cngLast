@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>(주)씨앤지테크</title>
+    <link>https://cngtech.co.kr</link>
+    <description>30년 전통 암롤박스 전문 제조기업 (주)씨앤지테크. 암롤박스, 고철박스, 스크랩박스 제작 및 렌탈, 수리 서비스를 제공합니다.</description>
+    <language>ko</language>
+    <item>
+      <title>회사 소개</title>
+      <link>https://cngtech.co.kr/Sub1</link>
+      <description>30년 전통 암롤박스 전문 제조기업 씨앤지테크를 소개합니다.</description>
+    </item>
+    <item>
+      <title>제품 안내</title>
+      <link>https://cngtech.co.kr/Sub2</link>
+      <description>암롤박스, 고철박스, 스크랩박스, 방통 등 다양한 제품을 확인하세요.</description>
+    </item>
+    <item>
+      <title>견적 문의</title>
+      <link>https://cngtech.co.kr/Sub2_2</link>
+      <description>제품 견적 및 문의를 남겨주세요.</description>
+    </item>
+    <item>
+      <title>FAQ / 문의</title>
+      <link>https://cngtech.co.kr/Sub3</link>
+      <description>자주 묻는 질문과 문의 안내입니다.</description>
+    </item>
+    <item>
+      <title>렌탈 서비스</title>
+      <link>https://cngtech.co.kr/Rental</link>
+      <description>무료 렌탈 및 유료 렌탈 서비스를 안내합니다.</description>
+    </item>
+  </channel>
+</rss>
